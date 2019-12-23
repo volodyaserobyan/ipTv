@@ -1,0 +1,100 @@
+.Login {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../../assets/Rectangle\ 69.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+
+  &-Img {
+      max-width: 372px;
+
+      img {
+          width: 100%;
+      }
+  }
+
+  &-Form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 667px;
+    width: 100%;
+    margin-top: 45px;
+
+    &-Inp {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #5433d7;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+      display: flex;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      padding-left: 22px;
+      margin-bottom: 27px;
+
+      input {
+        margin-left: 22px;
+        font-size: 24px;
+        line-height: 36px;
+        color: #acacac;
+        border: 0;
+        outline: none;
+        width: 100%;
+      }
+    }
+
+    &-Checkbox {
+      display: flex;
+      align-items: center;
+
+      input {
+        width: 46px;
+        height: 43px;
+        background: #ffffff;
+        border: 1px solid #797979;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 36px;
+        color: #242424;
+      }
+    }
+
+    &-Submit {
+      width: 100%;
+      background: linear-gradient(90deg, #5433d7 50%, #bc3cc7 129.26%);
+      border-radius: 42px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: #ffffff;
+      padding: 24px 0;
+      margin-top: 31px;
+      border: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
