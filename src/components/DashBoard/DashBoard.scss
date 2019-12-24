@@ -1,0 +1,84 @@
+.Dashboard {
+  display: flex;
+  min-height: 100vh;
+
+  aside {
+    max-width: 188px;
+    width: 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #222133;
+    padding-top: 14px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    .Dashboard-Navbar {
+      width: 100%;
+      nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .Nav-Wrapper {
+      width: 100%;
+
+      ul {
+        width: 100%;
+        li {
+          width: 100%;
+          list-style: none;
+          margin-top: 18px;
+          padding: 8px 16px;
+          line-height: 0;
+
+          img {
+            width: 28px;
+          }
+
+          &.isActive {
+              border-left: 1px solid #BC4778;
+              background: #090821;
+          }
+        }
+      }
+    }
+
+    &.active {
+      width: 188px;
+      background: #222133;
+      align-items: flex-start;
+      // padding-left: 14px;
+
+      nav {
+        justify-content: flex-start;
+        > img {
+          margin-left: 11px;
+        }
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 12px 0px;
+
+        > p {
+          margin-left: 15px;
+          font-size: 14px;
+          line-height: 17px;
+          color: #c4c2e4;
+        }
+      }
+    }
+  }
+
+  &-Main {
+    width: 100%;
+  }
+}
