@@ -22,7 +22,7 @@ const Login = () => {
     if (isAuth) {
         return (
             <Redirect to={{
-                pathname: "/dashboard"
+                pathname: `${process.env.PUBLIC_URL}/dashboard`
             }} />
         )
     }
