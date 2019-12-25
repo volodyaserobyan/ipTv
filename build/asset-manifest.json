@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.c84b9cc8.chunk.css",
-    "main.js": "/static/js/main.8a670ebf.chunk.js",
-    "main.js.map": "/static/js/main.8a670ebf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a1003b0d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a1003b0d.js.map",
-    "static/js/2.6b672959.chunk.js": "/static/js/2.6b672959.chunk.js",
-    "static/js/2.6b672959.chunk.js.map": "/static/js/2.6b672959.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.b23c0729e3b67e4b24759ea3f9c08206.js": "/precache-manifest.b23c0729e3b67e4b24759ea3f9c08206.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c84b9cc8.chunk.css.map": "/static/css/main.c84b9cc8.chunk.css.map",
-    "static/js/2.6b672959.chunk.js.LICENSE": "/static/js/2.6b672959.chunk.js.LICENSE",
-    "static/media/Login.scss": "/static/media/Rectangle 69.9475638a.png",
-    "static/media/vector22 2.png": "/static/media/vector22 2.026af4ca.png"
+    "main.css": "/react/iptv/build/static/css/main.3859fbea.chunk.css",
+    "main.js": "/react/iptv/build/static/js/main.a2ae6019.chunk.js",
+    "main.js.map": "/react/iptv/build/static/js/main.a2ae6019.chunk.js.map",
+    "runtime-main.js": "/react/iptv/build/static/js/runtime-main.ecb2221a.js",
+    "runtime-main.js.map": "/react/iptv/build/static/js/runtime-main.ecb2221a.js.map",
+    "static/js/2.e379dc67.chunk.js": "/react/iptv/build/static/js/2.e379dc67.chunk.js",
+    "static/js/2.e379dc67.chunk.js.map": "/react/iptv/build/static/js/2.e379dc67.chunk.js.map",
+    "index.html": "/react/iptv/build/index.html",
+    "precache-manifest.4e82fcf843bede22a24e91952e49062f.js": "/react/iptv/build/precache-manifest.4e82fcf843bede22a24e91952e49062f.js",
+    "service-worker.js": "/react/iptv/build/service-worker.js",
+    "static/css/main.3859fbea.chunk.css.map": "/react/iptv/build/static/css/main.3859fbea.chunk.css.map",
+    "static/js/2.e379dc67.chunk.js.LICENSE": "/react/iptv/build/static/js/2.e379dc67.chunk.js.LICENSE",
+    "static/media/Login.scss": "/react/iptv/build/static/media/Rectangle 69.9475638a.png",
+    "static/media/vector22 2.png": "/react/iptv/build/static/media/vector22 2.026af4ca.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a1003b0d.js",
-    "static/js/2.6b672959.chunk.js",
-    "static/css/main.c84b9cc8.chunk.css",
-    "static/js/main.8a670ebf.chunk.js"
+    "static/js/runtime-main.ecb2221a.js",
+    "static/js/2.e379dc67.chunk.js",
+    "static/css/main.3859fbea.chunk.css",
+    "static/js/main.a2ae6019.chunk.js"
   ]
 }
