@@ -24,7 +24,7 @@
           width: 100%;
           justify-content: space-between;
           background: #222133;
-          border-radius: 15px 15px 15px 0px;
+          border-radius: 15px 0px 15px 0px;
           padding: 25px 40px;
 
           img {
@@ -53,6 +53,24 @@
             text-align: left;
           }
         }
+      }
+    }
+
+    &-DiagramWrapper {
+      display: flex;
+
+      &_diagram {
+        width: 100%;
+        margin-top: 12px;
+        background: #222133;
+        border-radius: 15px;
+        padding: 9px;
+        flex: 2;
+      }
+
+      .Fake {
+        border: 1px solid red;
+        flex: 1;
       }
     }
   }

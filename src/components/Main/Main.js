@@ -3,10 +3,12 @@ import useIcons from '../../assets/VectorUserss.png'
 import graph from '../../assets/VectorGraph.png'
 import calendar from '../../assets/calendar.png'
 import subIcon from '../../assets/subscription 1.png'
+import Diagram from '../Diagram/Diagram'
 
 import './Main.scss'
 
 const Main = () => {
+
     return (
         <section className="Main">
             <div className="Main-Cont">
@@ -47,7 +49,14 @@ const Main = () => {
                             <img src={subIcon} alt="" />
                         </div>
                     </div>
-                    
+                </div>
+                <div className="Main-Cont-DiagramWrapper">
+                    <div className="Main-Cont-DiagramWrapper_diagram">
+                        <Diagram />
+                    </div>
+                    <div className="Fake">
+
+                    </div>
                 </div>
             </div>
         </section>
