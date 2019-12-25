@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/projects/ipTv/build/static/css/main.5e6b1778.chunk.css",
-    "main.js": "/projects/ipTv/build/static/js/main.762029c7.chunk.js",
-    "main.js.map": "/projects/ipTv/build/static/js/main.762029c7.chunk.js.map",
-    "runtime-main.js": "/projects/ipTv/build/static/js/runtime-main.bca0007c.js",
-    "runtime-main.js.map": "/projects/ipTv/build/static/js/runtime-main.bca0007c.js.map",
-    "static/js/2.3e26ebb4.chunk.js": "/projects/ipTv/build/static/js/2.3e26ebb4.chunk.js",
-    "static/js/2.3e26ebb4.chunk.js.map": "/projects/ipTv/build/static/js/2.3e26ebb4.chunk.js.map",
-    "index.html": "/projects/ipTv/build/index.html",
-    "precache-manifest.5b0634220c0eb1e42778e384aea17d23.js": "/projects/ipTv/build/precache-manifest.5b0634220c0eb1e42778e384aea17d23.js",
-    "service-worker.js": "/projects/ipTv/build/service-worker.js",
-    "static/css/main.5e6b1778.chunk.css.map": "/projects/ipTv/build/static/css/main.5e6b1778.chunk.css.map",
-    "static/js/2.3e26ebb4.chunk.js.LICENSE": "/projects/ipTv/build/static/js/2.3e26ebb4.chunk.js.LICENSE",
-    "static/media/Login.scss": "/projects/ipTv/build/static/media/Rectangle 69.9475638a.png",
-    "static/media/vector22 2.png": "/projects/ipTv/build/static/media/vector22 2.026af4ca.png"
+    "main.css": "/static/css/main.c84b9cc8.chunk.css",
+    "main.js": "/static/js/main.5c45d14d.chunk.js",
+    "main.js.map": "/static/js/main.5c45d14d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a1003b0d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a1003b0d.js.map",
+    "static/js/2.6b672959.chunk.js": "/static/js/2.6b672959.chunk.js",
+    "static/js/2.6b672959.chunk.js.map": "/static/js/2.6b672959.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f22ae2ce220a846f0e95d0301637b386.js": "/precache-manifest.f22ae2ce220a846f0e95d0301637b386.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c84b9cc8.chunk.css.map": "/static/css/main.c84b9cc8.chunk.css.map",
+    "static/js/2.6b672959.chunk.js.LICENSE": "/static/js/2.6b672959.chunk.js.LICENSE",
+    "static/media/Login.scss": "/static/media/Rectangle 69.9475638a.png",
+    "static/media/vector22 2.png": "/static/media/vector22 2.026af4ca.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.bca0007c.js",
-    "static/js/2.3e26ebb4.chunk.js",
-    "static/css/main.5e6b1778.chunk.css",
-    "static/js/main.762029c7.chunk.js"
+    "static/js/runtime-main.a1003b0d.js",
+    "static/js/2.6b672959.chunk.js",
+    "static/css/main.c84b9cc8.chunk.css",
+    "static/js/main.5c45d14d.chunk.js"
   ]
 }
