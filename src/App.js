@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <Route path={`${process.env.PUBLIC_URL}/`} component={Login} exact />
-          <Route path={`${process.env.PUBLIC_URL}/dashboard`} component={DashBoard} />
+          <Route path='/' component={Login} exact />
+          <Route path='/dashboard' component={DashBoard} />
         </Switch>
       </BrowserRouter>
     </div>
