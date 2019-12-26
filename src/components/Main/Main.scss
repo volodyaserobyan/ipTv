@@ -68,9 +68,11 @@
         flex: 2;
       }
 
-      .Fake {
-        border: 1px solid red;
+      &-Tables {
         flex: 1;
+        background: #222133;
+        border-radius: 15px;
+        margin: 9px;
       }
     }
   }

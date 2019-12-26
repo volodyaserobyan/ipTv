@@ -4,6 +4,7 @@ import graph from '../../assets/VectorGraph.png'
 import calendar from '../../assets/calendar.png'
 import subIcon from '../../assets/subscription 1.png'
 import Diagram from '../Diagram/Diagram'
+import Tables from './Tables/Tables'
 
 import './Main.scss'
 
@@ -54,8 +55,8 @@ const Main = () => {
                     <div className="Main-Cont-DiagramWrapper_diagram">
                         <Diagram />
                     </div>
-                    <div className="Fake">
-
+                    <div className="Main-Cont-DiagramWrapper-Tables">
+                        <Tables />
                     </div>
                 </div>
             </div>
