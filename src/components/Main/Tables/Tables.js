@@ -207,7 +207,7 @@ const Tables = () => {
 
     return (
         <div>
-            <ReactDataTablePagination arrayOfObjects={arrayOfObjects} dataInOnePage={2} />
+            <ReactDataTablePagination arrayOfObjects={arrayOfObjects} dataInOnePage={4} />
         </div>
     )
 }
