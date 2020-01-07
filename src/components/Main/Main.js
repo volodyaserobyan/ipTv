@@ -57,6 +57,7 @@ const Main = () => {
                     </div>
                     <div className="Main-Cont-DiagramWrapper-Tables">
                         <Tables />
+                        <Tables />
                     </div>
                 </div>
             </div>

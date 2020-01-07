@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import ReactDataTablePagination from 'react-datatable-pagination'
-// import { MDBDataTable } from 'mdbreact'
-// import "bootstrap-css-only/css/bootstrap.min.css";
-// import "mdbreact/dist/css/mdb.css";
-// import '@fortawesome/fontawesome-free/css/all.min.css';
+import Select from 'react-select'
+import Group4 from '../../../assets/Group 4.png'
 
 import "./Tables.scss"
 
 const Tables = () => {
+    const [selectedOption, setSelectedOption] = useState(null);
 
     const arrayOfObjects = [
         {
@@ -205,9 +204,32 @@ const Tables = () => {
         }
     ];
 
+    const options = [
+        { value: 4, label: 'Show 4  entries' },
+        { value: 5, label: 'Show 5  entries' },
+        { value: 6, label: 'Show 6  entries' },
+    ];
+
+    const handleChange = selectedOption => {
+        setSelectedOption(selectedOption)
+    }
+
+    useEffect(() => {
+        const content = document.getElementsByClassName('css-1wa3eu0-placeholder')[0];
+        content.innerHTML = selectedOption == null ? "Show 4  entries" : selectedOption.label
+    }, [])
+
     return (
-        <div>
-            <ReactDataTablePagination arrayOfObjects={arrayOfObjects} dataInOnePage={4} />
+        <div className="Tables">
+            <div className="Tables-Title">
+                <p>Expiring in 1 Week</p>
+                <Select
+                    value={selectedOption}
+                    onChange={handleChange}
+                    options={options}
+                />
+            </div>
+            <ReactDataTablePagination arrayOfObjects={arrayOfObjects} dataInOnePage={selectedOption == null ? 4 : selectedOption.value} />
         </div>
     )
 }
