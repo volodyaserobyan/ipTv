@@ -1,0 +1,30 @@
+.Item {
+  padding: 8px 20px;
+  display: flex;
+  background: #31304f;
+  justify-content: space-between;
+  border-radius: 5px;
+  margin-top: 4px;
+
+  .Wrapper-Left {
+    display: flex;
+
+    p {
+      margin-left: 40px;
+      font-size: 18px;
+      line-height: 22px;
+      color: #c4c2e4;
+    }
+  }
+
+  .Wrapper-Right {
+    display: flex;
+
+    p {
+      margin-left: 40px;
+      font-size: 18px;
+      color: #c4c2e4;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.Radio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #222133;
+    border: 1px solid #BC4778;
+    border-radius: 15px;
+    padding-top: 24px;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+
+    &-Select {
+      display: flex;
+      justify-content: space-between;
+
+      &-1 {
+        display: flex;
+
+        h1 {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 26px;
+          color: #c4c2e4;
+          box-sizing: border-box;
+        }
+      }
+    }
+
+    &-Title {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 81px;
+      border: 1px solid #090821;
+      box-sizing: border-box;
+      border-radius: 5px;
+      margin-top: 14px;
+
+      .Wrapper-Right {
+        display: flex;
+
+        &_2 {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
