@@ -1,6 +1,11 @@
 import React from 'react';
 import Login from './components/Login/Login'
 import DashBoard from './components/Dashboard/DashBoard'
+import Chanel from './components/Chanel/Chanel'
+import Clients from './components/Clients/Clients'
+import SubSellers from './components/SubSellers/SubSellers'
+import Settings from './components/Settings/Settings'
+import Main from './components/Main/Main'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 
@@ -11,6 +16,11 @@ function App() {
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} component={Login} exact />
           <Route path={`${process.env.PUBLIC_URL}/dashboard`} component={DashBoard} />
+          {/* <Route path={`${process.env.PUBLIC_URL}/dashboard/main`} component={Main} />
+          <Route path={`${process.env.PUBLIC_URL}/dashboard/clients`} component={Clients} />
+          <Route path={`${process.env.PUBLIC_URL}/dashboard/chanel`} component={Chanel} />
+          <Route path={`${process.env.PUBLIC_URL}/dashboard/subsellers`} component={SubSellers} />
+          <Route path={`${process.env.PUBLIC_URL}/dashboard/settings`} component={Settings} /> */}
         </Switch>
       </BrowserRouter>
     </div>
@@ -57,8 +67,7 @@ export default App;
 //     const renderPageNumbers = pageNumbers.map(number => {
 //       return (
 //         <li
-//           key={number}
-//           id={number}
+//           key={number}//           id={number}
 //           onClick={this.handleClick}
 //         >
 //           {number}

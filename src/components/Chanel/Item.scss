@@ -21,10 +21,14 @@
     display: flex;
 
     p {
-      margin-left: 40px;
+      margin-right: 40px;
       font-size: 18px;
       color: #c4c2e4;
       line-height: 22px;
+
+      &:nth-child(2) {
+        margin: 0;
+      }
     }
   }
 }

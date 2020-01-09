@@ -33,20 +33,23 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        li {
+
+        a {
           width: 100%;
           list-style: none;
           margin-top: 18px;
           padding: 8px 16px;
           line-height: 0;
-
+          background: #222133;
+          text-decoration: none;
+          border: none;
+          
+          &.isActive {
+            border-left: 1px solid #bc4778;
+            background: #090821;
+          }
           img {
             width: 28px;
-          }
-
-          &.isActive {
-              border-left: 1px solid #BC4778;
-              background: #090821;
           }
         }
       }

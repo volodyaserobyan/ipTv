@@ -1,48 +1,98 @@
 .Radio {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background: #222133;
-    border: 1px solid #BC4778;
-    border-radius: 15px;
-    padding-top: 24px;
-    padding-right: 14px;
-    padding-left: 14px;
-    padding-bottom: 15px;
-    margin-left: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #222133;
+  border: 1px solid #bc4778;
+  border-radius: 15px;
+  padding-top: 24px;
+  padding-right: 14px;
+  padding-left: 14px;
+  padding-bottom: 15px;
+  margin-left: 20px;
 
-    &-Select {
+  &-Select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-1 {
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
-      &-1 {
-        display: flex;
-
-        h1 {
-          font-weight: 500;
-          font-size: 22px;
-          line-height: 26px;
-          color: #c4c2e4;
-          box-sizing: border-box;
-        }
+      h1 {
+          margin-left: 7px;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        color: #c4c2e4;
+        box-sizing: border-box;
       }
     }
 
-    &-Title {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 81px;
-      border: 1px solid #090821;
-      box-sizing: border-box;
-      border-radius: 5px;
-      margin-top: 14px;
+    &-2 {
+      .css-2b097c-container {
+        width: 172px;
+      }
 
-      .Wrapper-Right {
-        display: flex;
+      .css-yk16xz-control {
+        background-color: #222133 !important;
+      }
 
-        &_2 {
-          margin-left: 20px;
-        }
+      .css-1hwfws {
+        background-color: #222133 !important;
+        color: #c4c2e4;
+      }
+
+      .css-1pahdxg-control {
+        background-color: #222133 !important;
+        color: #c4c2e4;
+      }
+
+      .css-yk16xz-control {
+        border-style: none;
       }
     }
   }
+
+  &-Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 81px;
+    padding-right: 20px;
+    border: 1px solid #090821;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 14px;
+
+    .Wrapper-Right {
+      display: flex;
+
+      div {
+        width: 100%;
+      }
+
+      &_2 {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &-Pagination {
+    display: flex;
+    justify-content: flex-end;
+
+    .isActive {
+        background: #1B1A2A;;
+    }
+
+    li {
+      padding: 11px 17px;
+      background: #222133;
+      color: #98A7B9;
+      border-left: 1px solid #1B1A2A;;
+    }
+  }
+}
