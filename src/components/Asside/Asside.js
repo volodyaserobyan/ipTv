@@ -21,7 +21,7 @@ const Asside = props => {
             <div className="Nav-Wrapper">
                 <ul>
                     <NavLink to={{
-                        pathname: '/dashboard/main'
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/main`
                     }}
                         activeClassName="isActive">
                         <li>
@@ -29,7 +29,7 @@ const Asside = props => {
                         </li>
                     </NavLink>
                     <NavLink to={{
-                        pathname: '/dashboard/chanel'
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/chanel`
                     }}
                         activeClassName="isActive">
                         <li>
@@ -37,7 +37,7 @@ const Asside = props => {
                         </li>
                     </NavLink>
                     <NavLink to={{
-                        pathname: '/dashboard/clients'
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/clients`
                     }}
                         activeClassName='isActive'>
                         <li>
@@ -45,7 +45,7 @@ const Asside = props => {
                         </li>
                     </NavLink>
                     <NavLink to={{
-                        pathname: '/dashboard/subsellers'
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/subsellers`
                     }}
                         activeClassName="isActive">
                         <li>
@@ -53,7 +53,7 @@ const Asside = props => {
                         </li>
                     </NavLink>
                     <NavLink to={{
-                        pathname: '/dashboard/settings'
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/settings`
                     }}
                         activeClassName='isActive'>
                         <li>

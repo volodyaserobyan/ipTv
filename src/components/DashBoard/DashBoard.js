@@ -66,11 +66,15 @@ const DashBoard = (props) => {
                 <NavBar
                     handleClick={handleClick}
                     isOpen={isOpen} />
-                <Route path={`${process.env.PUBLIC_URL}/dashboard/main`} component={Main} />
-                <Route path={`${process.env.PUBLIC_URL}/dashboard/clients`} component={Clients} />
-                <Route path={`${process.env.PUBLIC_URL}/dashboard/chanel`} component={Chanel} />
-                <Route path={`${process.env.PUBLIC_URL}/dashboard/subsellers`} component={SubSellers} />
-                <Route path={`${process.env.PUBLIC_URL}/dashboard/settings`} component={Settings} />
+                {/* <BrowserRouter> */}
+                    {/* <Switch> */}
+                        <Route path={`${process.env.PUBLIC_URL}/dashboard/main`} component={Main} />
+                        <Route path={`${process.env.PUBLIC_URL}/dashboard/clients`} component={Clients} />
+                        <Route path={`${process.env.PUBLIC_URL}/dashboard/chanel`} component={Chanel} />
+                        <Route path={`${process.env.PUBLIC_URL}/dashboard/subsellers`} component={SubSellers} />
+                        <Route path={`${process.env.PUBLIC_URL}/dashboard/settings`} component={Settings} />
+                    {/* </Switch> */}
+                {/* </BrowserRouter> */}
                 {/* {rend} */}
             </div>
         </section>
