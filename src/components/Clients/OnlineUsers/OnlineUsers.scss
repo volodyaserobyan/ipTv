@@ -20,26 +20,17 @@
         font-size: 22px;
         line-height: 26px;
         color: #c4c2e4;
-        flex: 1;
         text-align: left;
       }
 
       input {
-        flex: 2;
         background: #1b1a2a;
         border-radius: 19.5px;
         height: 40px;
-        // width: 100px !important;
+        flex: 0 0 50%;
       }
 
       .SelectNpm {
-        flex: 1;
-        text-align: right;
-        // margin-left: 400px;
-
-        &-Inner__control {
-          // width: 187px;
-        }
       }
     }
 

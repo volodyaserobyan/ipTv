@@ -1,15 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Select from 'react-select'
+import Item from './Item'
 
 import './OnlineUsers.scss'
 
 const OnlineUsers = () => {
     const [select, setSelect] = useState(6)
+    const [search, setSearch] = useState(null)
     const [currentPage, setCurrentPage] = useState(1)
     const [todos, setTodos] = useState([1, 2, 3, 4, 5, 6, 3, 2, 3, 4, 5, 6, 7, 9, 7, 6, 4, 56, 7, 8, 9, 2, 43, 7, 8, 9, 10, 11])
     const [isActive, setIsActive] = useState(null)
     const [perPage, setPerPage] = useState(6)
-    const [onlineRadio, setOnlineRadio] = useState(null)
     const ref = useRef(null);
     let width = null
 
@@ -18,20 +19,8 @@ const OnlineUsers = () => {
     const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
 
     const renderTodos = currentTodos.map((todo, index) => {
-        return <div key={index} className="OnlineUsers-Table-Item">
-            <p className="OnlineUsers-Table-Item_id">2566</p>
-            <p className="OnlineUsers-Table-Item_address">Lorem</p>
-            <p className="OnlineUsers-Table-Item_owner">Lorem Ipsum</p>
-            <p className="OnlineUsers-Table-Item_status">Movies</p>
-            <div>
-                <input type='radio' name='online' checked={onlineRadio == true} onChange={() => { setOnlineRadio(true) }} />
-            </div>
-            <div>
-                <input type='radio' name='online' checked={onlineRadio == false} onChange={() => { setOnlineRadio(false) }} />
-            </div>
-            <p>2019/01/08</p>
-            <p>Actions</p>
-        </div>
+        return <Item key={index}
+            id={todo} />
     });
 
     const pageNumbers = [];
@@ -67,6 +56,25 @@ const OnlineUsers = () => {
         console.log(width)
     }, [ref.current])
 
+    const handleChangeSearch = e => {
+        const search = e.target.value
+        setSearch(e.target.value)
+        let currentList = [];
+        let newList = [];
+
+        if (search !== "") {
+            currentList = todos;
+            newList = currentList.filter(item => {
+                const lc = item.toString().toLowerCase();
+                const filter = search.toString().toLowerCase();
+                return lc.includes(filter);
+            });
+        }else {
+            newList = todos
+        }
+
+        setTodos(newList)
+    }
 
     const options = [
         { value: 4, label: 'Show 4  entries' },
@@ -79,7 +87,7 @@ const OnlineUsers = () => {
             <div className="OnlineUsers-Table">
                 <div className="OnlineUsers-Table-Control">
                     <h1>Online Users</h1>
-                    <input placeholder="Search" />
+                    <input onChange={handleChangeSearch} name='search' value={search} placeholder="Search" />
                     <Select
                         value={select}
                         className="SelectNpm"
