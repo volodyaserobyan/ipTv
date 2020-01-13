@@ -39,11 +39,9 @@ const Radio = (props) => {
     const handleClick = event => {
         setIsActive('isActive')
         setCurrentPage(Number(event.target.id))
-        console.log(isActive)
     }
 
     const renderPageNumbers = pageNumbers.map(number => {
-        console.log('sss', isActive)
         return (
             <li
                 key={number}
@@ -77,6 +75,8 @@ const Radio = (props) => {
                 <div className="Radio-Select-2">
                     <Select
                         value={select}
+                        className="SelectNpm"
+                        classNamePrefix="SelectNpm-Inner"
                         onChange={handleChange}
                         options={options}
                         placeholder="Show 6 entries"

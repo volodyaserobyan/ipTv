@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const Pagination = (props) => {
     const [currentPage, setCurrentPage] = useState(1)
-    const [perPage, setPerPage] = useState(5)
+    const [perPage, setPerPage] = useState(6)
 
     const indexOfLastTodo = currentPage * perPage;
     const indexOfFirstTodo = indexOfLastTodo - perPage;

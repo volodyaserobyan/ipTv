@@ -5,11 +5,24 @@ import tvIcon from '../../assets/VectorTv.png'
 import userIcon from '../../assets/VectorUser.png'
 import addUserIcon from '../../assets/VectoraddUser.png'
 import settingsIcon from '../../assets/Settings.png'
+import RightArrow from '../../assets/RightArrow.png'
+import TopArrow from '../../assets/TopArrow.png'
 import { NavLink } from 'react-router-dom';
 
 import './Asside.scss'
 
 const Asside = props => {
+
+    const [isDropDown, setDropDown] = useState(false)
+
+    const handleDropDown = identifier => {
+        if (identifier == 1) {
+            setDropDown(false)
+        }
+        else if (identifier == 2) {
+            setDropDown(true)
+        }
+    }
 
     return (
         <aside className={props.isOpen == "open" ? "active" : ""}>
@@ -37,13 +50,42 @@ const Asside = props => {
                         </li>
                     </NavLink>
                     <NavLink to={{
-                        pathname: `${process.env.PUBLIC_URL}/dashboard/clients`
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/clients/onlineusers`
                     }}
                         activeClassName='isActive'>
-                        <li>
-                            <img src={userIcon} alt="" /> {props.isOpen && <p>Clients</p>}
+                        <li className="Nav-Wrapper-Clients">
+                            <div>
+                                <img src={userIcon} alt="" /> {props.isOpen && <p>Clients {isDropDown ? <img className="TopArrow" src={TopArrow} onClick={() => handleDropDown(1)} /> :
+                                    <img className="RighntArrow" src={RightArrow} onClick={() => handleDropDown(2)} />}</p>}
+                            </div>
                         </li>
                     </NavLink>
+                    {isDropDown && <div className="Dropdown">
+                        <NavLink to={{
+                            pathname: `${process.env.PUBLIC_URL}/dashboard/clients/onlineusers`
+                        }}
+                        activeClassName='isActiveList'>
+                            Online Users
+                        </NavLink>
+                        <NavLink to={{
+                            pathname: `${process.env.PUBLIC_URL}/dashboard/clients/lines`
+                        }}
+                        activeClassName='isActiveList'>
+                            Manage Lines
+                        </NavLink>
+                        <NavLink to={{
+                            pathname: `${process.env.PUBLIC_URL}/dashboard/clients/mag`
+                        }}
+                        activeClassName='isActiveList'>
+                            Manage MAG
+                        </NavLink>
+                        <NavLink to={{
+                            pathname: `${process.env.PUBLIC_URL}/dashboard/clients/preactive`
+                        }}
+                        activeClassName='isActiveList'>
+                            Preactive codes
+                        </NavLink>
+                    </div>}
                     <NavLink to={{
                         pathname: `${process.env.PUBLIC_URL}/dashboard/subsellers`
                     }}
@@ -62,7 +104,7 @@ const Asside = props => {
                     </NavLink>
                 </ul>
             </div>
-        </aside>
+        </aside >
     )
 }
 

@@ -43,15 +43,57 @@
           background: #222133;
           text-decoration: none;
           border: none;
-          
+
           &.isActive {
             border-left: 1px solid #bc4778;
             background: #090821;
           }
           img {
-            width: 28px;
+            // width: 28px;
+          }
+          p {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .RighntArrow {
+              height: 12px;
+            }
           }
         }
+      }
+      .Nav-Wrapper-Clients {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          width: 100%;
+          display: flex;
+          p {
+            font-size: 14px;
+            line-height: 17px;
+            color: #c4c2e4;
+            margin-left: 14px;
+          }
+        }
+      }
+    }
+    .Dropdown {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: column;
+      background: #222133 !important;
+
+      a {
+        padding: 0px;
+        color: black;
+      }
+
+      .isActiveList {
+        color: white;
       }
     }
 
