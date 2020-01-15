@@ -2,7 +2,16 @@ import React, { useState } from 'react'
 import './Item.scss'
 
 const Item = props => {
-    const [onlineRadio, setOnlineRadio] = useState(null)
+    const [onlineRadio, setOnlineRadio] = useState(false)
+
+    const handleRadioBtn = () => {
+        if(onlineRadio) {
+            setOnlineRadio(false)
+        }
+        else {
+            setOnlineRadio(true)
+        }
+    }
 
     return (
         <div className="Item">
@@ -11,10 +20,16 @@ const Item = props => {
             <p className="Item_owner">Lorem Ipsum</p>
             <p className="Item_status">Movies</p>
             <div>
-                <input type='radio' name='online' checked={onlineRadio == true} onChange={() => { setOnlineRadio(true) }} />
+                <label className="radioLabel">
+                    <input type='radio' name={`online ${props.identifyerRadio}`} checked={onlineRadio == true} onChange={handleRadioBtn} />
+                    <div className="check"></div>
+                </label>
             </div>
             <div>
-                <input type='radio' name='online' checked={onlineRadio == false} onChange={() => { setOnlineRadio(false) }} />
+                <label className="radioLabel">
+                    <input type='radio' name={`online ${props.identifyerRadio}`} checked={onlineRadio == false} onChange={handleRadioBtn} />
+                    <div className="check"></div>
+                    </label>
             </div>
             <p>2019/01/08</p>
             <p>Actions</p>
