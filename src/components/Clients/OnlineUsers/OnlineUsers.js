@@ -78,7 +78,7 @@ const OnlineUsers = () => {
                 </div>
                 {renderTodos}
             </div>
-            <div className="OnlineUsers-Pagination">
+            <div className="Pagination">
                 {renderPageNumbers}
             </div>
         </section>

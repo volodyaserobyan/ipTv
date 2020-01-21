@@ -52,7 +52,8 @@ const Asside = props => {
                     <NavLink to={{
                         pathname: `${process.env.PUBLIC_URL}/dashboard/clients/onlineusers`
                     }}
-                        activeClassName='isActive'>
+                        activeClassName='isActive'
+                        className={window.location.href.includes('/dashboard/clients/') ? 'isActive' : ''}>
                         <li className="Nav-Wrapper-Clients">
                             <div>
                                 <img src={userIcon} alt="" /> {props.isOpen && <p>Clients {isDropDown ? <img className="TopArrow" src={TopArrow} onClick={() => handleDropDown(1)} /> :
@@ -87,9 +88,10 @@ const Asside = props => {
                         </NavLink>
                     </div>}
                     <NavLink to={{
-                        pathname: `${process.env.PUBLIC_URL}/dashboard/subsellers`
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/subsellers/details`
                     }}
-                        activeClassName="isActive">
+                        activeClassName="isActive"
+                        className={window.location.href.includes('/dashboard/subsellers/') ? 'isActive' : ''}>
                         <li>
                             <img src={addUserIcon} alt="" /> {props.isOpen && <p>Subsellers</p>}
                         </li>

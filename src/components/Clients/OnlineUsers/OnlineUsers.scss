@@ -77,19 +77,19 @@
     }
   }
 
-  &-Pagination {
-    display: flex;
-    justify-content: flex-end;
+  // &-Pagination {
+  //   display: flex;
+  //   justify-content: flex-end;
 
-    .isActive {
-      background: #1b1a2a;
-    }
+  //   .isActive {
+  //     background: #1b1a2a;
+  //   }
 
-    li {
-      padding: 11px 17px;
-      background: #222133;
-      color: #98a7b9;
-      border-left: 1px solid #1b1a2a;
-    }
-  }
+  //   li {
+  //     padding: 11px 17px;
+  //     background: #222133;
+  //     color: #98a7b9;
+  //     border-left: 1px solid #1b1a2a;
+  //   }
+  // }
 }

@@ -1,12 +1,15 @@
 import React from 'react';
 import Login from './components/Login/Login'
-import DashBoard from './components/Dashboard/DashBoard'
+import DashBoard from './components/DashBoard/DashBoard'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux'
+import NewLineModal from './components/Clients/Lines/NewLineModal'
 import './App.scss';
 
-function App() {
+const App = props => {
   return (
     <div className="App">
+      {props.isOpenModal && <NewLineModal />}
       <BrowserRouter>
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} component={Login} exact />
@@ -17,4 +20,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    isOpenModal: state.modalReducer.isModal
+  }
+}
+
+export default connect(mapStateToProps)(App)
