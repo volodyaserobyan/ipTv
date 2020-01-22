@@ -3,7 +3,6 @@ import Tvv from '../../assets/Tvv.png'
 import TvIcon from '../../assets/Group 4.png'
 import Mark from '../../assets/Mark.png'
 import Label from '../../assets/Label.png'
-import Pagination from '../Pagination/Pagination'
 import Item from './Item'
 
 import './Tv.scss'

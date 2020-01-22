@@ -23,7 +23,9 @@ const Search = props => {
             newList = [1, 2, 3, 4, 5, 6, 3, 2, 3, 4, 5, 6, 7, 9, 7, 6, 4, 56, 7, 8, 9, 2, 43, 7, 8, 9, 10, 11]
         }
 
-        props.setTodos(newList)
+        if(typeof props.setTodos == 'function') {
+            props.setTodos(newList)
+        }
     }
 
     return (

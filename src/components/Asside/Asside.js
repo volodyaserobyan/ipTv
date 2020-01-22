@@ -25,7 +25,7 @@ const Asside = props => {
     }
 
     return (
-        <aside className={props.isOpen == "open" ? "active" : ""}>
+        <aside className={props.isOpenAsside == "open" ? "active" : ""}>
             <div className="Dashboard-Navbar">
                 <nav>
                     <img src={ipTv} alt="" />
@@ -38,7 +38,7 @@ const Asside = props => {
                     }}
                         activeClassName="isActive">
                         <li>
-                            <img src={dashIcon} alt="" /> {props.isOpen && <p>Dashboard</p>}
+                            <img src={dashIcon} alt="" /> {props.isOpenAsside && <p>Dashboard</p>}
                         </li>
                     </NavLink>
                     <NavLink to={{
@@ -46,7 +46,7 @@ const Asside = props => {
                     }}
                         activeClassName="isActive">
                         <li>
-                            <img src={tvIcon} alt="" /> {props.isOpen && <p>Chanel List</p>}
+                            <img src={tvIcon} alt="" /> {props.isOpenAsside && <p>Chanel List</p>}
                         </li>
                     </NavLink>
                     <NavLink to={{
@@ -56,7 +56,7 @@ const Asside = props => {
                         className={window.location.href.includes('/dashboard/clients/') ? 'isActive' : ''}>
                         <li className="Nav-Wrapper-Clients">
                             <div>
-                                <img src={userIcon} alt="" /> {props.isOpen && <p>Clients {isDropDown ? <img className="TopArrow" src={TopArrow} onClick={() => handleDropDown(1)} /> :
+                                <img src={userIcon} alt="" /> {props.isOpenAsside && <p>Clients {isDropDown ? <img className="TopArrow" src={TopArrow} onClick={() => handleDropDown(1)} /> :
                                     <img className="RighntArrow" src={RightArrow} onClick={() => handleDropDown(2)} />}</p>}
                             </div>
                         </li>
@@ -93,7 +93,7 @@ const Asside = props => {
                         activeClassName="isActive"
                         className={window.location.href.includes('/dashboard/subsellers/') ? 'isActive' : ''}>
                         <li>
-                            <img src={addUserIcon} alt="" /> {props.isOpen && <p>Subsellers</p>}
+                            <img src={addUserIcon} alt="" /> {props.isOpenAsside && <p>Subsellers</p>}
                         </li>
                     </NavLink>
                     <NavLink to={{
@@ -101,7 +101,7 @@ const Asside = props => {
                     }}
                         activeClassName='isActive'>
                         <li>
-                            <img src={settingsIcon} alt="" />{props.isOpen && <p>Settings</p>}
+                            <img src={settingsIcon} alt="" />{props.isOpenAsside && <p>Settings</p>}
                         </li>
                     </NavLink>
                 </ul>

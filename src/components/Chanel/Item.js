@@ -9,6 +9,7 @@ const Item = (props) => {
     useEffect(() => {
         const width = ref.current ? ref.current.offsetWidth : 0;
         props.toggleWidth(width)
+        // console.log(width)
     }, [ref.current])
 
     return (

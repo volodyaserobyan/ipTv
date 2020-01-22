@@ -9,7 +9,7 @@ import './NavBar.scss'
 const NavBar = (props) => {
     return (
         <nav className="NavBar">
-            <div onClick={() => props.handleClick()} className={`m-lines ${props.isOpen}`}>
+            <div onClick={() => props.handleClickAside()} className={`m-lines ${props.isOpenAsside}`}>
                 <div className="">
                     <div className="one"></div>
                     <div className="two"></div>
@@ -21,7 +21,7 @@ const NavBar = (props) => {
                 <span><img src={dolarIcon} alt="" /> <p>Balance: 122 Credits</p></span>
                 <span><img src={notIcon} alt="" /></span>
                 <span><img className="User-Image" src={userImage} alt="" /> <p>Alex Mendes</p></span>
-                <span className="LogOutSpan"><img alt="" src={LogOutIcon} /> <p>Logs <img alt="" src={arrowIcon} /></p></span>
+                <span onClick={() => props.handleClickLogs()} className="LogOutSpan"><img alt="" src={LogOutIcon} /> <p>Logs <img alt="" src={arrowIcon} /></p></span>
             </div>
         </nav>
     )

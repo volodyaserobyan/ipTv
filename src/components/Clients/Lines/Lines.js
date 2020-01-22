@@ -60,16 +60,7 @@ const Lines = props => {
             props.isModalOpen(true)
         }
     }
-
-
-    // <div onClick={addNewLine} className="Modal-NewLine">
-    //                 <div className="Modal-NewLine-Cont">
-    //                     <div className="newLine-Box">
-
-    //                     </div>
-    //                 </div>
-    //             </div>
-
+    
     return (
         <section className="Lines">
             <div className="Lines-Table">

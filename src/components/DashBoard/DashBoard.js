@@ -8,33 +8,47 @@ import SubSellers from '../SubSellers/SubSellers'
 import Settings from '../Settings/Settings'
 import { withRouter } from "react-router";
 import { Route } from 'react-router-dom';
+import Logs from './Logs'
 import './DashBoard.scss'
 
 const DashBoard = (props) => {
-    const [isOpen, setIsOpen] = useState("");
+    const [isOpenAsside, setIsOpenAsside] = useState("");
+    const [isOpenLogs, setIsOpenLogs] = useState(false)
 
-    const handleClick = () => {
-        if (isOpen == "") {
-            setIsOpen("open")
+    const handleClickAsside = () => {
+        if (isOpenAsside == "") {
+            setIsOpenAsside("open")
         }
         else {
-            setIsOpen("")
+            setIsOpenAsside("")
+        }
+    }
+
+    const handleClickLogs = () => {
+        if (isOpenLogs) {
+            setIsOpenLogs(false)
+        }
+        else {
+            setIsOpenLogs(true)
         }
     }
 
     return (
         <section className="Dashboard">
             <Asside
-                isOpen={isOpen} />
+                isOpenAsside={isOpenAsside} />
             <div className="Dashboard-Main">
                 <NavBar
-                    handleClick={handleClick}
-                    isOpen={isOpen} />
+                    handleClickAside={handleClickAsside}
+                    isOpenAsside={isOpenAsside}
+                    handleClickLogs={handleClickLogs}
+                    isOpenLogs={isOpenLogs} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/main`} component={Main} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/clients`} component={Clients} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/chanel`} component={Chanel} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/subsellers`} component={SubSellers} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/settings`} component={Settings} />
+                {isOpenLogs && <Logs handleClickLogs={handleClickLogs} />}
             </div>
         </section>
     )

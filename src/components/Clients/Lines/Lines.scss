@@ -71,6 +71,10 @@
       align-items: center;
       background: #31304f;
       border-radius: 5px;
+      
+      &_id {
+        text-align: left !important;
+      }
 
       > div {
         input {

@@ -3,7 +3,6 @@ import Tvv from '../../assets/Tvv.png'
 import TvIcon from '../../assets/Group 4.png'
 import Mark from '../../assets/Mark.png'
 import Label from '../../assets/Label.png'
-import Pagination from '../Pagination/Pagination'
 import microphone from '../../assets/microphone.png'
 import Select from 'react-select'
 import Item from './Item'
@@ -101,11 +100,9 @@ const Radio = (props) => {
                 </div>
             </div>
             {renderTodos}
-            {/* <ul id="page-numbers"> */}
             <div className="Radio-Pagination">
                 {renderPageNumbers}
             </div>
-            {/* </ul> */}
         </div>
     )
 }
