@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-import DashboardTitle from '../../DashboardTitle'
+import DashboardTitle from '../DashboardTitle'
 import Item from './Item'
+import './CreditLogs.scss'
 
-import './OnlineUsers.scss'
-
-const OnlineUsers = () => {
+const CreditLogs = () => {
     const [select, setSelect] = useState(6)
     const [currentPage, setCurrentPage] = useState(1)
-    const [todos, setTodos] = useState([1, 2, 3, 4, 5, 6, 3, 2, 3, 4, 5, 6, 7, 9, 7, 6, 4, 56, 7, 8, 9, 2, 43, 7, 8, 9, 10, 11])
     const [isActive, setIsActive] = useState('isActive')
+    const [todos, setTodos] = useState([1, 2, 3, 4, 5, 6, 3, 2, 3, 4, 5, 6, 7, 9, 7, 6, 4, 56, 7, 8, 9, 2, 43, 7, 8, 9, 10, 11])
     const [perPage, setPerPage] = useState(6)
 
     const indexOfLastTodo = currentPage * perPage;
@@ -17,8 +16,7 @@ const OnlineUsers = () => {
 
     const renderTodos = currentTodos.map((todo, index) => {
         return <Item key={index}
-            id={todo}
-            identifyerRadio={index} />
+            id={todo} />
     });
 
     const pageNumbers = [];
@@ -44,27 +42,26 @@ const OnlineUsers = () => {
         );
     });
 
+
     const handleChange = selectedOption => {
         setPerPage(selectedOption.value)
         setSelect(selectedOption)
     }
 
     return (
-        <section className="OnlineUsers">
-            <div className="OnlineUsers-Table">
-                <DashboardTitle 
+        <section className="CreditLogs">
+            <div className="CreditLogs-Table">
+                <DashboardTitle
                     setTodos={setTodos}
                     select={select}
                     handleChange={handleChange} />
-                <div className="OnlineUsers-Table-Title">
-                    <p>ID</p>
-                    <p>MAC ADRESS</p>
-                    <p>OWNER</p>
-                    <p>STATUS</p>
-                    <p>ONLINE</p>
-                    <p>TRIAL</p>
-                    <p>EXPIRATION</p>
-                    <p>ACTIONS</p>
+                <div className="CreditLogs-Table-Title">
+                    <p>From</p>
+                    <p>Target User</p>
+                    <p>Amount</p>
+                    <p>Notes</p>
+                    <p>Reseller Note</p>
+                    <p>Date</p>
                 </div>
                 {renderTodos}
             </div>
@@ -75,4 +72,4 @@ const OnlineUsers = () => {
     )
 }
 
-export default OnlineUsers
+export default CreditLogs

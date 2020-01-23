@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/react/iptv/build/static/css/main.a81fbc89.chunk.css",
-    "main.js": "/react/iptv/build/static/js/main.31f447a5.chunk.js",
-    "main.js.map": "/react/iptv/build/static/js/main.31f447a5.chunk.js.map",
+    "main.css": "/react/iptv/build/static/css/main.972d028f.chunk.css",
+    "main.js": "/react/iptv/build/static/js/main.8f7c44fb.chunk.js",
+    "main.js.map": "/react/iptv/build/static/js/main.8f7c44fb.chunk.js.map",
     "runtime-main.js": "/react/iptv/build/static/js/runtime-main.ecb2221a.js",
     "runtime-main.js.map": "/react/iptv/build/static/js/runtime-main.ecb2221a.js.map",
-    "static/js/2.b535b066.chunk.js": "/react/iptv/build/static/js/2.b535b066.chunk.js",
-    "static/js/2.b535b066.chunk.js.map": "/react/iptv/build/static/js/2.b535b066.chunk.js.map",
+    "static/js/2.1acd063c.chunk.js": "/react/iptv/build/static/js/2.1acd063c.chunk.js",
+    "static/js/2.1acd063c.chunk.js.map": "/react/iptv/build/static/js/2.1acd063c.chunk.js.map",
     "index.html": "/react/iptv/build/index.html",
-    "precache-manifest.bac061f05b28d5ae42b14f126bfa36b3.js": "/react/iptv/build/precache-manifest.bac061f05b28d5ae42b14f126bfa36b3.js",
+    "precache-manifest.07abfbd3a930c7bdecd1bc02e1e3c30f.js": "/react/iptv/build/precache-manifest.07abfbd3a930c7bdecd1bc02e1e3c30f.js",
     "service-worker.js": "/react/iptv/build/service-worker.js",
-    "static/css/main.a81fbc89.chunk.css.map": "/react/iptv/build/static/css/main.a81fbc89.chunk.css.map",
-    "static/js/2.b535b066.chunk.js.LICENSE": "/react/iptv/build/static/js/2.b535b066.chunk.js.LICENSE",
+    "static/css/main.972d028f.chunk.css.map": "/react/iptv/build/static/css/main.972d028f.chunk.css.map",
+    "static/js/2.1acd063c.chunk.js.LICENSE": "/react/iptv/build/static/js/2.1acd063c.chunk.js.LICENSE",
     "static/media/Login.scss": "/react/iptv/build/static/media/Rectangle 69.9475638a.png",
     "static/media/vector22 2.png": "/react/iptv/build/static/media/vector22 2.026af4ca.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ecb2221a.js",
-    "static/js/2.b535b066.chunk.js",
-    "static/css/main.a81fbc89.chunk.css",
-    "static/js/main.31f447a5.chunk.js"
+    "static/js/2.1acd063c.chunk.js",
+    "static/css/main.972d028f.chunk.css",
+    "static/js/main.8f7c44fb.chunk.js"
   ]
 }

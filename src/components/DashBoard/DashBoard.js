@@ -6,6 +6,7 @@ import Clients from '../Clients/Clients'
 import Chanel from '../Chanel/Chanel'
 import SubSellers from '../SubSellers/SubSellers'
 import Settings from '../Settings/Settings'
+import CreditLogs from '../CreditLogs/CreditLogs'
 import { withRouter } from "react-router";
 import { Route } from 'react-router-dom';
 import Logs from './Logs'
@@ -47,6 +48,7 @@ const DashBoard = (props) => {
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/clients`} component={Clients} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/chanel`} component={Chanel} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/subsellers`} component={SubSellers} />
+                <Route path={`${process.env.PUBLIC_URL}/dashboard/creditslogs`} component={CreditLogs} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/settings`} component={Settings} />
                 {isOpenLogs && <Logs handleClickLogs={handleClickLogs} />}
             </div>

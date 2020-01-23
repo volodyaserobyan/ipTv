@@ -9,21 +9,6 @@
     display: flex;
     flex-direction: column;
 
-    &-Control {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      h1 {
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 26px;
-        color: #c4c2e4;
-        text-align: left;
-      }
-    }
-
     &-Title {
       margin-top: 60px;
       width: 100%;

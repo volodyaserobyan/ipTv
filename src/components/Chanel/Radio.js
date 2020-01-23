@@ -14,7 +14,7 @@ const Radio = (props) => {
     const [todos, setTodos] = useState([1, 2, 3, 4, 5, 6, 3, 2, 3, 4, 5, 6, 7, 9, 7, 6, 4, 56, 7, 8, 9, 2, 43, 7, 8, 9, 10, 11])
     const [select, setSelect] = useState(6)
     const [width, setWidth] = useState(null)
-    const [isActive, setIsActive] = useState(null)
+    const [isActive, setIsActive] = useState('isActive')
 
     const indexOfLastTodo = currentPage * perPage;
     const indexOfFirstTodo = indexOfLastTodo - perPage;
@@ -46,7 +46,7 @@ const Radio = (props) => {
                 key={number}
                 id={number}
                 onClick={handleClick}
-                className={number == currentPage ? isActive : ""}
+                className={number == currentPage && isActive}
             >
                 {number}
             </li>

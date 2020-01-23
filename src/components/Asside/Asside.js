@@ -7,6 +7,7 @@ import addUserIcon from '../../assets/VectoraddUser.png'
 import settingsIcon from '../../assets/Settings.png'
 import RightArrow from '../../assets/RightArrow.png'
 import TopArrow from '../../assets/TopArrow.png'
+import CreditLogsImage from '../../assets/CreditLogsImage.png'
 import { NavLink } from 'react-router-dom';
 
 import './Asside.scss'
@@ -65,25 +66,25 @@ const Asside = props => {
                         <NavLink to={{
                             pathname: `${process.env.PUBLIC_URL}/dashboard/clients/onlineusers`
                         }}
-                        activeClassName='isActiveList'>
+                            activeClassName='isActiveList'>
                             Online Users
                         </NavLink>
                         <NavLink to={{
                             pathname: `${process.env.PUBLIC_URL}/dashboard/clients/lines`
                         }}
-                        activeClassName='isActiveList'>
+                            activeClassName='isActiveList'>
                             Manage Lines
                         </NavLink>
                         <NavLink to={{
                             pathname: `${process.env.PUBLIC_URL}/dashboard/clients/mag`
                         }}
-                        activeClassName='isActiveList'>
+                            activeClassName='isActiveList'>
                             Manage MAG
                         </NavLink>
                         <NavLink to={{
                             pathname: `${process.env.PUBLIC_URL}/dashboard/clients/preactive`
                         }}
-                        activeClassName='isActiveList'>
+                            activeClassName='isActiveList'>
                             Preactive codes
                         </NavLink>
                     </div>}
@@ -94,6 +95,14 @@ const Asside = props => {
                         className={window.location.href.includes('/dashboard/subsellers/') ? 'isActive' : ''}>
                         <li>
                             <img src={addUserIcon} alt="" /> {props.isOpenAsside && <p>Subsellers</p>}
+                        </li>
+                    </NavLink>
+                    <NavLink to={{
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/creditslogs`
+                    }}
+                        activeClassName='isActive'>
+                        <li>
+                            <img src={CreditLogsImage} alt="" />{props.isOpenAsside && <p>Credits Logs</p>}
                         </li>
                     </NavLink>
                     <NavLink to={{

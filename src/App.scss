@@ -50,6 +50,31 @@ button {
 .App {
   text-align: center;
 
+  input {
+    outline: none;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  .Pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+
+    .isActive {
+      background: #1b1a2a;
+    }
+
+    li {
+      padding: 11px 17px;
+      background: #222133;
+      color: #98a7b9;
+      border-left: 1px solid #1b1a2a;
+    }
+  }
+
   .radioLabel {
     cursor: pointer;
     height: 30px;

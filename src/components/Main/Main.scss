@@ -7,12 +7,13 @@
 
     &-Cards {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       justify-content: space-between;
 
       &_item {
+        width: 100%;
         display: flex;
-        flex-basis: 25%;
+        // flex-basis: 25%;
         padding-right: 8px;
         &:nth-child(4n + 4) {
           padding: 0;
@@ -35,7 +36,7 @@
         &_content {
           display: flex;
           justify-content: flex-start;
-          flex-direction: column;
+          flex-direction: column; 
 
           h1 {
             background: -webkit-linear-gradient(97.71deg, #5d277f 0%, #af3f65 52.5%, #ff7173 124.44%);

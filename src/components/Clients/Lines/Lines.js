@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { options } from '../../Const/Const'
 import Select from 'react-select'
 import Item from './Item'
-import Search from '../../Search/Search'
+import DashboardTitle from '../../DashboardTitle'
 import { connect } from 'react-redux'
 import './Lines.scss'
 import { isModalActive } from '../../Action'
@@ -12,8 +12,7 @@ const Lines = props => {
     const [currentPage, setCurrentPage] = useState(1)
     const [todos, setTodos] = useState([1, 2, 3, 4, 5, 6, 3, 2, 3, 4, 5, 6, 7, 9, 7, 6, 4, 56, 7, 8, 9, 2, 43, 7, 8, 9, 10, 11])
     const [perPage, setPerPage] = useState(6)
-    const [isActive, setIsActive] = useState(null)
-    const [addLine, setaddLine] = useState(false)
+    const [isActive, setIsActive] = useState('isActive')
 
     const indexOfLastTodo = currentPage * perPage;
     const indexOfFirstTodo = indexOfLastTodo - perPage;
@@ -46,7 +45,7 @@ const Lines = props => {
                 key={number}
                 id={number}
                 onClick={handleClick}
-                className={number == currentPage ? isActive : ""}
+                className={number == currentPage && isActive}
             >
                 {number}
             </li>
@@ -54,28 +53,20 @@ const Lines = props => {
     });
 
     const addNewLine = () => {
-        if(props.isOpenModal) {
+        if (props.isOpenModal) {
             props.isModalOpen(false)
         } else {
             props.isModalOpen(true)
         }
     }
-    
+
     return (
         <section className="Lines">
             <div className="Lines-Table">
-                <div className="Lines-Table-Control">
-                    <h1>Manage Lines</h1>
-                    <Search setTodos={setTodos} />
-                    <Select
-                        value={select}
-                        className="SelectNpm"
-                        classNamePrefix="SelectNpm-Inner"
-                        onChange={handleChange}
-                        options={options}
-                        placeholder="Show 6 entries"
-                    />
-                </div>
+                <DashboardTitle
+                    setTodos={setTodos}
+                    select={select}
+                    handleChange={handleChange} />
                 <div className="Lines-Table-Add">
                     <p onClick={addNewLine}>+New Line</p>
                     <Select
