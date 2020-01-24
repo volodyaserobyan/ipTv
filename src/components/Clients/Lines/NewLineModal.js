@@ -20,51 +20,77 @@ const NewLineModal = props => {
         { value: 6, label: 'Show 6  entries' },
     ];
 
+    console.log(props)
+
     return (
         <div className="NewLineModal">
             <div onClick={e => e.stopPropagation()} className="NewLineModal-Cont">
                 <div className="NewLineModal-Cont-Title">
                     <h1>New Line</h1>
-                    <img onClick={() => props.isModalOpen(false)} src={VectorX} alt='' />
+                    <img onClick={() => props.isModalOpen({
+                        isModal: false,
+                        isMag: undefined
+                    })} src={VectorX} alt='' />
                 </div>
                 <form className="NewLineModal-Cont-Context">
                     <div className="NewLineModal-Cont-Context_elm">
                         <div><img src={DolarSign} alt='' /> <p>You have 108 credits available</p></div>
                         <div><img src={HourSign} alt='' /> <p>You can create 100 trials today</p></div>
                     </div>
-                    <input placeholder='Email' />
-                    {/* <Select
-                        value={select}
-                        className="SelectModal"
-                        classNamePrefix="SelectModal-Inner"
-                        onChange={handleChange}
-                        options={options}
-                        placeholder="Select Package" /> */}
-                        <input placeholder="Select Package" />
-                    <input placeholder="Number of Codes" />
-                    <textarea placeholder="Number of Codes" />
+                    {props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isMag ?
+                        <div className="NewLineModal-Cont-Context-IsMag">
+                            <div className="NewLineModal-Cont-Context-IsMag-1">
+                                <input placeholder='Email' />
+                                <input placeholder="Mac Address" />
+                                <input placeholder="Select Package" />
+                                <input placeholder="Max Connection" />
+                                <p>+ 0 Credits</p>
+                            </div>
+                            <div className="NewLineModal-Cont-Context-IsMag-2">
+                                <h1>Any lock added to the line will take effect on the first connection.</h1>
+                                <input placeholder='Lock to IP Address' />
+                                <input placeholder="Lock to ISP" />
+                                <input placeholder="Lock to Country" />
+                                <textarea placeholder="Notes" />
+                            </div>
+                        </div>
+                        :
+                        <div>
+                            <input placeholder='Email' />
+                            <input placeholder="Select Package" />
+                            <input placeholder="Number of Codes" />
+                            <textarea placeholder="Number of Codes" />
+                        </div>}
                     <input type='submit' className='NewLineModal-Cont-Context-Submit' value='EDIT BOUQUETS' />
+                    <div className='NewLineModal-Cont-Footer'>
+                        <div>
+                            <div>
+                                <p>0 Credits</p>
+                            </div>
+                            <div>
+                                <p>Create Line</p>
+                            </div>
+                            <div className='NewLineModal-Cont-Footer-Close'>
+                                <p>Close</p>
+                            </div>
+                        </div>
+                    </div>
                 </form>
-                <div className='NewLineModal-Cont-Footer'>
-                    <div>
-                        <p>0 Credits</p>
-                    </div>
-                    <div>
-                        <p>Create Line</p>
-                    </div>
-                    <div>
-                        <p>Close</p>
-                    </div>
-                </div>
             </div>
         </div>
     )
 }
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
     return {
-        isModalOpen: bool => dispatch(isModalActive(bool))
+        isOpenModal: state.modalReducer
     }
 }
 
-export default connect(null, mapDispatchToProps)(NewLineModal)
+const mapDispatchToProps = dispatch => {
+    return {
+        isModalOpen: obj => dispatch(isModalActive(obj))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewLineModal)

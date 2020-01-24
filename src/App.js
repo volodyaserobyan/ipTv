@@ -7,9 +7,10 @@ import NewLineModal from './components/Clients/Lines/NewLineModal'
 import './App.scss';
 
 const App = props => {
+  console.log(props, 'app')
   return (
     <div className="App">
-      {props.isOpenModal && <NewLineModal />}
+      {props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isModal && <NewLineModal />}
       <BrowserRouter>
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} component={Login} exact />
@@ -22,7 +23,7 @@ const App = props => {
 
 const mapStateToProps = state => {
   return {
-    isOpenModal: state.modalReducer.isModal
+    isOpenModal: state.modalReducer
   }
 }
 

@@ -47,7 +47,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 16px;
-      text-align: left;
+      // text-align: left;
 
       p {
         font-weight: 500;
@@ -55,11 +55,7 @@
         line-height: 22px;
         color: #c4c2e4;
         flex: 1;
-        text-align: center;
-      }
-
-      &_id {
-        text-align: left !important;
+        // text-align: center;
       }
     }
     &-Item {
@@ -73,7 +69,7 @@
       border-radius: 5px;
       
       &_id {
-        text-align: left !important;
+        // text-align: left !important;
       }
 
       > div {

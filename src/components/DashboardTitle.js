@@ -8,7 +8,7 @@ const DashboardTitle = props => {
 
     return (
         <div className="DashboardTitle">
-            <h1>Online Users</h1>
+            <h1>{props.isMag ? 'Manage Mag' : props.isLines ? 'Manage Lines' : 'Online Users'}</h1>
             <Search setTodos={props.setTodos} />
             <Select
                 value={props.select}

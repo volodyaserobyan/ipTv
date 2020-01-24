@@ -55,6 +55,29 @@
       flex-direction: column;
       padding: 45px 160px;
 
+      &-IsMag {
+        &-1 {
+          p {
+            margin-top: 20px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: #999999;
+          }
+        }
+
+        &-2 {
+          margin-top: 41px;
+          h1 {
+            text-align: left;
+            font-size: 22px;
+            line-height: 27px;
+            color: #c4c2e4;
+          }
+        }
+      }
+
       &_elm {
         width: 100%;
         display: flex;
@@ -75,6 +98,17 @@
           img {
             margin-left: 10px;
           }
+        }
+      }
+
+      > div {
+        input,
+        textarea {
+          width: 100%;
+          padding: 15px 28px;
+          background: #1b1a2a;
+          border-radius: 15px;
+          margin-top: 28px;
         }
       }
 
@@ -100,6 +134,7 @@
       &-Submit {
         background: linear-gradient(90deg, #5433d7 50%, #bc3cc7 129.26%) !important;
         border-radius: 42px;
+
         padding: 18px 0px;
         font-weight: 600;
         font-size: 18px;
@@ -113,18 +148,33 @@
     &-Footer {
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-end;
+      margin-top: 36px;
 
       > div {
-        border-radius: 42px;
-        padding: 18px;
-        border: 1px solid #bc4778;
+        display: flex;
+        > div {
+          margin-right: 8px;
+          border-radius: 42px;
+          padding: 18px;
+          border: 1px solid #bc4778;
 
-        p {
-          font-size: 24px;
-          line-height: 36px;
-          text-transform: lowercase;
-          color: #bc4778;
+          p {
+            font-size: 18px;
+            line-height: 27px;
+            text-transform: capitalize;
+            color: #bc4778;
+          }
+        }
+
+        .NewLineModal-Cont-Footer-Close {
+          padding: 18px;
+          border: 1px solid #98a7b9;
+          p {
+            color: #98a7b9;
+            font-size: 18px;
+            line-height: 27px;
+          }
         }
       }
     }

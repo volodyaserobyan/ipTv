@@ -52,11 +52,16 @@ const Lines = props => {
         );
     });
 
+    const sendObj = {
+        isModal: false,
+        isMag: props.isMag
+    }
     const addNewLine = () => {
-        if (props.isOpenModal) {
-            props.isModalOpen(false)
+        if (props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isModal) {
+            props.isModalOpen(sendObj)
         } else {
-            props.isModalOpen(true)
+            sendObj.isModal = true
+            props.isModalOpen(sendObj)
         }
     }
 
@@ -66,7 +71,9 @@ const Lines = props => {
                 <DashboardTitle
                     setTodos={setTodos}
                     select={select}
-                    handleChange={handleChange} />
+                    handleChange={handleChange}
+                    isMag={props.isMag}
+                    isLines={props.isLines} />
                 <div className="Lines-Table-Add">
                     <p onClick={addNewLine}>+New Line</p>
                     <Select
@@ -80,17 +87,16 @@ const Lines = props => {
                 </div>
                 <div className="Lines-Table-Title">
                     <p className="Lines-Table-Title_id">ID</p>
-                    <p>MASS ACTIONS</p>
-                    <p>ON/OFF</p>
-                    <p>CREATED BY/ID</p>
+                    <p>OWNER</p>
                     <p>USERNAME</p>
                     <p>PASSWORD</p>
-                    <p>EXPIRY DATE</p>
-                    <p>CONNECTIONS</p>
-                    <p>NOTES</p>
-                    <p>STATUS</p>
-                    <p>LIVE CHANNEL</p>
-                    <p>MAC ADDRESS</p>
+                    <p>LOGO</p>
+                    <p>NOW</p>
+                    <p>IP</p>
+                    <p>UPTIME</p>
+                    <p>EXPIRE DATE</p>
+                    <p>NOTE</p>
+                    <p>CLIENT COUNTRY</p>
                     <p>ACTIONS</p>
                 </div>
                 {renderTodos}
@@ -104,13 +110,13 @@ const Lines = props => {
 
 const mapStateToProps = state => {
     return {
-        isOpenModal: state.modalReducer.isModal
+        isOpenModal: state.modalReducer
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        isModalOpen: bool => dispatch(isModalActive(bool))
+        isModalOpen: obj => dispatch(isModalActive(obj))
     }
 }
 
