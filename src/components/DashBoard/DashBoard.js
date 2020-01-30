@@ -7,6 +7,8 @@ import Chanel from '../Chanel/Chanel'
 import SubSellers from '../SubSellers/SubSellers'
 import Settings from '../Settings/Settings'
 import CreditLogs from '../CreditLogs/CreditLogs'
+import Message from '../Message/Message'
+import Notification from '../Notification/Notification'
 import { withRouter } from "react-router";
 import { Route } from 'react-router-dom';
 import Logs from './Logs'
@@ -15,6 +17,8 @@ import './DashBoard.scss'
 const DashBoard = (props) => {
     const [isOpenAsside, setIsOpenAsside] = useState("");
     const [isOpenLogs, setIsOpenLogs] = useState(false)
+    const [isOpenMessage, setIsOpenMessage] = useState(false)
+    const [isOpenNotification, setIsOpenNotification] = useState(false)
 
     const handleClickAsside = () => {
         if (isOpenAsside == "") {
@@ -26,13 +30,11 @@ const DashBoard = (props) => {
     }
 
     const handleClickLogs = () => {
-        if (isOpenLogs) {
-            setIsOpenLogs(false)
-        }
-        else {
-            setIsOpenLogs(true)
-        }
+        setIsOpenLogs(!isOpenLogs)
     }
+
+    const handleMessage = () => setIsOpenMessage(!isOpenMessage)
+    const handleNotification = () => setIsOpenNotification(!isOpenNotification)
 
     return (
         <section className="Dashboard">
@@ -43,7 +45,11 @@ const DashBoard = (props) => {
                     handleClickAside={handleClickAsside}
                     isOpenAsside={isOpenAsside}
                     handleClickLogs={handleClickLogs}
-                    isOpenLogs={isOpenLogs} />
+                    isOpenLogs={isOpenLogs}
+                    isOpenMessage={handleMessage}
+                    isOpenNotification={handleNotification} />
+                {isOpenMessage && <Message />}
+                {isOpenNotification && <Notification />}
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/main`} component={Main} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/clients`} component={Clients} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/chanel`} component={Chanel} />

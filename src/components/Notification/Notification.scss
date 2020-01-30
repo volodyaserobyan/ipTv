@@ -1,0 +1,48 @@
+.Notification {
+  position: absolute;
+  background: #222133;
+  display: flex;
+  flex-direction: column;
+  right: 400px;
+  z-index: 2;
+  width: 290px;
+
+  &-Item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 12px;
+
+    &-Title {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      h1 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        color: #c4c2e4;
+      }
+
+      > img {
+        height: 17px;
+      }
+    }
+
+    h6 {
+      font-size: 14px;
+      line-height: 20px;
+      color: #c4c2e4;
+      margin-top: 8px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 10px;
+      color: #31304f;
+      margin-top: 8px;
+    }
+  }
+}
