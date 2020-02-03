@@ -22,7 +22,7 @@ const NavBar = (props) => {
                 <span><img src={dolarIcon} alt="" /> <p>Balance: 122 Credits</p></span>
                 <span><img onClick={() => props.isOpenMessage()} src={messageIcon} alt="" /></span>
                 <span><img onClick={() => props.isOpenNotification()} src={notIcon} alt="" /></span>
-                <span><img className="User-Image" src={userImage} alt="" /> <p>Alex Mendes</p></span>
+                <span><img className="User-Image" src={userImage} alt="" /> <p>{localStorage.getItem('userName')}</p></span>
                 <span onClick={() => props.handleClickLogs()} className="LogOutSpan"><img alt="" src={LogOutIcon} /> <p>Logs <img alt="" src={arrowIcon} /></p></span>
             </div>
         </nav>

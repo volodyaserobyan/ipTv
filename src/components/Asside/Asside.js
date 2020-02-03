@@ -9,8 +9,10 @@ import RightArrow from '../../assets/RightArrow.png'
 import TopArrow from '../../assets/TopArrow.png'
 import CreditLogsImage from '../../assets/CreditLogsImage.png'
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux'
 
 import './Asside.scss'
+import { LogOut } from '../Action'
 
 const Asside = props => {
 
@@ -23,6 +25,10 @@ const Asside = props => {
         else if (identifier == 2) {
             setDropDown(true)
         }
+    }
+
+    const handleLogOut = () => {
+        props.logOut('http://192.168.0.121:8000/api/logout')
     }
 
     return (
@@ -113,10 +119,24 @@ const Asside = props => {
                             <img src={settingsIcon} alt="" />{props.isOpenAsside && <p>Settings</p>}
                         </li>
                     </NavLink>
+
+                    <button onClick={handleLogOut}>Log out</button>
                 </ul>
             </div>
         </aside >
     )
 }
 
-export default Asside
+const mapStateToProps = state => {
+    return {
+        logOutReducer: state.logOutReducer
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        logOut: url => dispatch(LogOut(url))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Asside)
