@@ -8,21 +8,6 @@ import { withRouter } from 'react-router-dom';
 import './Clients.scss'
 
 const Clients = (props) => {
-    // const [isActive, setIsActive] = useState(false)
-
-    // useEffect(() => {
-    //     if (props.location.pathname == '/dashboard/clients') {
-    //         setIsActive(true)
-    //     }
-    // }, [])
-
-    // if (isActive) {
-    //     return (
-    //         <Redirect to={{
-    //             pathname: `${process.env.PUBLIC_URL}/dashboard/clients/onlineusers`
-    //         }} />
-    //     )
-    // }
     return (
         <section className="Clients">
                     <Route path={`${process.env.PUBLIC_URL}/dashboard/clients/onlineusers`} component={OnlineUsers} />

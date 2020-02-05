@@ -28,7 +28,7 @@ const Asside = props => {
     }
 
     const handleLogOut = () => {
-        props.logOut('http://192.168.0.121:8000/api/logout')
+        props.logOut('http://192.168.0.122:8000/api/logout')
     }
 
     return (

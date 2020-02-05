@@ -15,11 +15,7 @@ export const isAuthLogin = (url, infoObj) => {
             },
             body: JSON.stringify(infoObj)
         }).then((response) => response.json())
-            .then(res => {
-                // console.log(res)
-                return res
-            }).then(info => {
-                // console.log(info)
+            .then(info => {
                 dispatch({
                     type: "SUCCESS_LOGIN",
                     info: info
@@ -36,20 +32,17 @@ export const isAuthLogin = (url, infoObj) => {
 }
 
 export const LogOut = url => {
-
     return (dispatch) => {
         fetch(url, {
-            method: 'POST',
+            method: 'GET',
             headers: {
                 "Accept": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem('token')}`
             }
-        }).then((response) => response.json())
+        }).then(response => response.json())
             .then(res => {
-                // console.log(res)
                 return res
             }).then(logOut => {
-                // console.log(logOut)
                 dispatch({
                     type: "SUCCESS_LOGOUT",
                     logOut: logOut

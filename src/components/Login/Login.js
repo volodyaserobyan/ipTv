@@ -9,13 +9,12 @@ import './Login.scss'
 import { isAuthLogin } from '../Action'
 let _ = require('lodash')
 
-
 const Login = props => {
 
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
     const [isRobot, setIsRobot] = useState(false);
-    // const [isAuth, setIsAuth] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -25,16 +24,17 @@ const Login = props => {
             password: password
         }
 
-        props.fetchData('http://192.168.0.121:8000/api/login', sendObj)
+        props.fetchData('http://192.168.0.122:8000/api/login', sendObj)
         console.log(sendObj)
     }
 
     useEffect(() => {
-        if (props.loginReducer != undefined) {
+        if (props.loginReducer != undefined && props.logOutReducer == undefined) {
             localStorage.setItem('token', props.loginReducer.success.access_token)
             localStorage.setItem('userName', props.loginReducer.user.name)
+            setIsSuccess(true)
         }
-    }, [props.loginReducer])
+    }, [props.loginReducer != undefined && props.loginReducer.success])
 
     if (isAuth()) {
         return (
@@ -90,7 +90,8 @@ const Login = props => {
 
 const mapStateToProps = state => {
     return {
-        loginReducer: state.loginReducer.info
+        loginReducer: state.loginReducer.info,
+        logOutReducer: state.logOutReducer.logOut
     }
 }
 
