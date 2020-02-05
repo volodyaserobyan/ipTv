@@ -29,7 +29,7 @@ const Login = props => {
     }
 
     useEffect(() => {
-        if (props.loginReducer != undefined && props.logOutReducer == undefined) {
+        if (props.loginReducer != undefined) {
             localStorage.setItem('token', props.loginReducer.success.access_token)
             localStorage.setItem('userName', props.loginReducer.user.name)
             setIsSuccess(true)
@@ -90,8 +90,7 @@ const Login = props => {
 
 const mapStateToProps = state => {
     return {
-        loginReducer: state.loginReducer.info,
-        logOutReducer: state.logOutReducer.logOut
+        loginReducer: state.loginReducer.info
     }
 }
 

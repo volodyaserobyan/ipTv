@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react/iptv/build/precache-manifest.c7dee063ed940e72ab9407a4f838928a.js"
+  "/react/iptv/build/precache-manifest.1f9aae377b08dac56971975083c85442.js"
 );
 
 self.addEventListener('message', (event) => {
