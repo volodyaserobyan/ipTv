@@ -1,3 +1,10 @@
+export const isModalActiveDropDown = data => {
+    return {
+        type: 'MODAL_OPEN_DROPDOWN',
+        isModalDropDown: data
+    }
+}
+
 export const isModalActive = obj => {
     return {
         type: 'MODAL_OPEN',

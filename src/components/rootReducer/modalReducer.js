@@ -6,6 +6,11 @@ export const modalReducer = (state = {}, action) => {
                 ...state,
                 isModal: action.isModal
             }
+        case 'MODAL_OPEN_DROPDOWN':
+            return {
+                ...state,
+                isModalDropDown: action.isModalDropDown
+            }
         default: return state;
     }
 }

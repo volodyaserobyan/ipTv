@@ -13,21 +13,21 @@ const Lines = props => {
     const [todos, setTodos] = useState([1, 2, 3, 4, 5, 6, 3, 2, 3, 4, 5, 6, 7, 9, 7, 6, 4, 56, 7, 8, 9, 2, 43, 7, 8, 9, 10, 11])
     const [perPage, setPerPage] = useState(6)
     const [isActive, setIsActive] = useState('isActive')
-
     const indexOfLastTodo = currentPage * perPage;
     const indexOfFirstTodo = indexOfLastTodo - perPage;
     const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
-
+    
     const renderTodos = currentTodos.map((todo, index) => {
         return <Item key={index}
             id={todo}
-            identifyerRadio={index} />
+            ident={index} />
     });
 
     const handleChange = (selectedOption) => {
         setPerPage(selectedOption.value)
         setSelect(selectedOption)
     }
+
 
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(todos.length / perPage); i++) {

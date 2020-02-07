@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { isModalActive } from '../../Action'
+import { isModalActive } from '../Action'
 import Select from 'react-select'
-import VectorX from '../../../assets/VectorX.png'
-import DolarSign from '../../../assets/DolarSign.png'
-import HourSign from '../../../assets/HourSign.png'
+import VectorX from '../../assets/VectorX.png'
+import DolarSign from '../../assets/DolarSign.png'
+import HourSign from '../../assets/HourSign.png'
 import './NewLineModal.scss'
 
 const NewLineModal = props => {
@@ -37,30 +37,12 @@ const NewLineModal = props => {
                         <div><img src={DolarSign} alt='' /> <p>You have 108 credits available</p></div>
                         <div><img src={HourSign} alt='' /> <p>You can create 100 trials today</p></div>
                     </div>
-                    {props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isMag ?
-                        <div className="NewLineModal-Cont-Context-IsMag">
-                            <div className="NewLineModal-Cont-Context-IsMag-1">
-                                <input placeholder='Email' />
-                                <input placeholder="Mac Address" />
-                                <input placeholder="Select Package" />
-                                <input placeholder="Max Connection" />
-                                <p>+ 0 Credits</p>
-                            </div>
-                            <div className="NewLineModal-Cont-Context-IsMag-2">
-                                <h1>Any lock added to the line will take effect on the first connection.</h1>
-                                <input placeholder='Lock to IP Address' />
-                                <input placeholder="Lock to ISP" />
-                                <input placeholder="Lock to Country" />
-                                <textarea placeholder="Notes" />
-                            </div>
-                        </div>
-                        :
                         <div>
                             <input placeholder='Email' />
                             <input placeholder="Select Package" />
                             <input placeholder="Number of Codes" />
                             <textarea placeholder="Number of Codes" />
-                        </div>}
+                        </div>
                     <input type='submit' className='NewLineModal-Cont-Context-Submit' value='EDIT BOUQUETS' />
                     <div className='NewLineModal-Cont-Footer'>
                         <div>

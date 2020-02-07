@@ -24,7 +24,7 @@ const Login = props => {
             password: password
         }
 
-        props.fetchData('http://192.168.0.122:8000/api/login', sendObj)
+        props.fetchData('http://192.168.0.139:8000/api/login', sendObj)
         console.log(sendObj)
     }
 

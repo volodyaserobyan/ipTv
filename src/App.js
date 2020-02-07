@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { isAuth } from './helpers/Utilities'
 import PrivateRoute from './helpers/PrivateRoute'
-import NewLineModal from './components/Clients/Lines/NewLineModal'
+import NewLineModal from './components/Modals/NewLineModal'
 import './App.scss';
 
 const App = props => {
@@ -20,6 +20,7 @@ const App = props => {
   return (
     <div className="App">
       {props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isModal && <NewLineModal />}
+      {props.isOpenModal.isModalDropDown != undefined && props.isOpenModal.isModalDropDown && <div></div>}
       <BrowserRouter>
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} component={Login} exact />
