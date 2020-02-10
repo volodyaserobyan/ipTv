@@ -1,0 +1,33 @@
+.ModalFooter {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 36px;
+
+  > div {
+    display: flex;
+    > div {
+      margin-right: 8px;
+      border-radius: 42px;
+      padding: 18px;
+      border: 1px solid #bc4778;
+
+      p {
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: capitalize;
+        color: #bc4778;
+      }
+    }
+
+    .ModalFooter-Close {
+      padding: 18px;
+      border: 1px solid #98a7b9;
+      p {
+        color: #98a7b9;
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+  }
+}

@@ -1,14 +1,21 @@
-export const isModalActiveDropDown = data => {
-    return {
-        type: 'MODAL_OPEN_DROPDOWN',
-        isModalDropDown: data
-    }
-}
-
 export const isModalActive = obj => {
     return {
         type: 'MODAL_OPEN',
         isModal: obj
+    }
+}
+
+export const isModalActiveDropDown = bool => {
+    return {
+        type: 'MODAL_OPEN_DROPDOWN',
+        isModalDropDown: bool
+    }
+}
+
+export const isModalActiveDropDownEdit = bool => {
+    return {
+        type: 'MODAL_OPEN_DROPDOWN_EDIT',
+        isModalDropDownEdit: bool
     }
 }
 

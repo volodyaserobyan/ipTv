@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 import { isAuth } from './helpers/Utilities'
 import PrivateRoute from './helpers/PrivateRoute'
 import NewLineModal from './components/Modals/NewLineModal'
+import DownloadModal from './components/Modals/DownloadModal'
+import EditModal from './components/Modals/EditModal'
 import './App.scss';
 
 const App = props => {
@@ -20,7 +22,8 @@ const App = props => {
   return (
     <div className="App">
       {props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isModal && <NewLineModal />}
-      {props.isOpenModal.isModalDropDown != undefined && props.isOpenModal.isModalDropDown && <div></div>}
+      {props.isOpenModal.isModalDropDown != undefined && props.isOpenModal.isModalDropDown && <DownloadModal />}
+      {props.isOpenModal.isModalDropDownEdit != undefined && props.isOpenModal.isModalDropDownEdit && <EditModal />}
       <BrowserRouter>
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} component={Login} exact />
