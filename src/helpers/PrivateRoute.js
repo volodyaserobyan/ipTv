@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 
-const PrivateRoute = ({ component: Component, flag, redirectPath = `${process.env.PUBLIC_URL}/`, ...rest }) => {
+const PrivateRoute = ({ component: Component, flag, redirectPath=`${process.env.PUBLIC_URL}/`, ...rest }) => {
     return (
         <Route
             {...rest}

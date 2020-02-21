@@ -31,7 +31,7 @@ const App = props => {
             path={`${process.env.PUBLIC_URL}/dashboard`}
             render={() => (
               <>
-                <PrivateRoute flag={isAuth} redirectPath="/" path={`${process.env.PUBLIC_URL}/dashboard`} component={DashBoard} />
+                <PrivateRoute flag={isAuth} redirectPath={`${process.env.PUBLIC_URL}/`} path={`${process.env.PUBLIC_URL}/dashboard`} component={DashBoard} />
               </>
             )}
           />
