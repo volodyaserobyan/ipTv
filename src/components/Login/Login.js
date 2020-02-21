@@ -24,7 +24,7 @@ const Login = props => {
             password: password
         }
 
-        props.fetchData('http://192.168.0.139:8000/api/login', sendObj)
+        props.fetchData('http://greatexpertdev.site/laravel/ip-tv/public/api/login', sendObj)
         console.log(sendObj)
     }
 

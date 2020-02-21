@@ -28,7 +28,7 @@ const Asside = props => {
     }
 
     const handleLogOut = () => {
-        props.logOut('http://192.168.0.139:8000/api/logout')
+        props.logOut('http://greatexpertdev.site/laravel/ip-tv/public/api/logout')
     }
 
     return (
