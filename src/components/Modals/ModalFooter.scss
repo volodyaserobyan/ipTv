@@ -6,6 +6,18 @@
 
   > div {
     display: flex;
+    .extends {
+      background: linear-gradient(90deg, #5433d7 50%, #bc3cc7 129.26%);
+      border-radius: 42px;
+      > p {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: capitalize;
+        color: #ffffff;
+        // padding: 14px 50px; 
+      }
+    }
     > div {
       margin-right: 8px;
       border-radius: 42px;

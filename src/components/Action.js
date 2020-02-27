@@ -12,6 +12,34 @@ export const isModalActiveDropDown = bool => {
     }
 }
 
+export const isModalActiveDropDownExtend = bool => {
+    return {
+        type: 'MODAL_OPEN_DROPDOWN_EXTEND',
+        isModalDropDownExtend: bool
+    }
+}
+
+export const isModalActiveDropDownStat = bool => {
+    return {
+        type: 'MODAL_OPEN_DROPDOWN_STAT',
+        isModalDropDownStat: bool
+    }
+}
+
+export const isModalActiveDropDownEpg = bool => {
+    return {
+        type: 'MODAL_OPEN_DROPDOWN_EPG',
+        isModalDropDownEpg: bool
+    }
+}
+
+export const isModalActiveDropDownLink = bool => {
+    return {
+        type: 'MODAL_OPEN_DROPDOWN_LINK',
+        isModalDropDownLink: bool
+    }
+}
+
 export const isModalActiveDropDownEdit = bool => {
     return {
         type: 'MODAL_OPEN_DROPDOWN_EDIT',

@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Login from './components/Login/Login'
 import DashBoard from './components/DashBoard/DashBoard'
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { isAuth } from './helpers/Utilities'
 import PrivateRoute from './helpers/PrivateRoute'
-import NewLineModal from './components/Modals/NewLineModal'
-import DownloadModal from './components/Modals/DownloadModal'
-import EditModal from './components/Modals/EditModal'
+import {
+  NewLineModal,
+  DownloadModal,
+  EditModal,
+  ExtendModal,
+  StatModal,
+  EpgModal,
+  LinkModal
+} from './components/Modals'
 import './App.scss';
 
 const App = props => {
@@ -24,6 +30,10 @@ const App = props => {
       {props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isModal && <NewLineModal />}
       {props.isOpenModal.isModalDropDown != undefined && props.isOpenModal.isModalDropDown && <DownloadModal />}
       {props.isOpenModal.isModalDropDownEdit != undefined && props.isOpenModal.isModalDropDownEdit && <EditModal />}
+      {props.isOpenModal.isModalDropDownExtend != undefined && props.isOpenModal.isModalDropDownExtend && <ExtendModal />}
+      {props.isOpenModal.isModalDropDownStat != undefined && props.isOpenModal.isModalDropDownStat && <StatModal />}
+      {props.isOpenModal.isModalDropDownLink != undefined && props.isOpenModal.isModalDropDownLink && <LinkModal />}
+      {props.isOpenModal.isModalDropDownEpg != undefined && props.isOpenModal.isModalDropDownEpg && <EpgModal />}
       <BrowserRouter>
         <Switch>
           <Route path={`${process.env.PUBLIC_URL}/`} component={Login} exact />
