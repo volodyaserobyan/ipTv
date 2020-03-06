@@ -64,7 +64,31 @@ export const isAuthLogin = (url, infoObj) => {
                 })
             }
             ).catch(error => {
-                console.log(error)
+                dispatch({
+                    type: 'ERROR',
+                    info: error
+                })
+            })
+    }
+}
+
+export const channelList = url => {
+
+    return (dispatch) => {
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then((response) => response.json())
+            .then(channel => {
+                dispatch({
+                    type: "GET_CHANNELS",
+                    channel: channel
+                })
+            }
+            ).catch(error => {
                 dispatch({
                     type: 'ERROR',
                     info: error
@@ -91,7 +115,6 @@ export const LogOut = url => {
                 })
             }
             ).catch(error => {
-                console.log(error)
                 dispatch({
                     type: 'ERROR',
                     info: error

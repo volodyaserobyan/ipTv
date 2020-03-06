@@ -20,8 +20,6 @@ const NewLineModal = props => {
         { value: 6, label: 'Show 6  entries' },
     ];
 
-    console.log(props)
-
     return (
         <div className="NewLineModal">
             <div onClick={e => e.stopPropagation()} className="NewLineModal-Cont">

@@ -1,5 +1,4 @@
 export const loginReducer = (state = {}, action) => {
-console.log(action)
     switch (action.type) {
         case 'SUCCESS_LOGIN':
             return {

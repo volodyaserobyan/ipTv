@@ -25,7 +25,6 @@ const Login = props => {
         }
 
         props.fetchData('http://greatexpertdev.site/laravel/ip-tv/public/api/login', sendObj)
-        console.log(sendObj)
     }
 
     useEffect(() => {

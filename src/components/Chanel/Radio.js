@@ -8,50 +8,18 @@ import Select from 'react-select'
 import Item from './Item'
 import "./Radio.scss"
 
-const Radio = (props) => {
-    const [currentPage, setCurrentPage] = useState(1)
-    const [perPage, setPerPage] = useState(6)
-    const [todos, setTodos] = useState([1, 2, 3, 4, 5, 6, 3, 2, 3, 4, 5, 6, 7, 9, 7, 6, 4, 56, 7, 8, 9, 2, 43, 7, 8, 9, 10, 11])
+const Radio = props => {
     const [select, setSelect] = useState(6)
     const [width, setWidth] = useState(null)
     const [isActive, setIsActive] = useState('isActive')
-
-    const indexOfLastTodo = currentPage * perPage;
-    const indexOfFirstTodo = indexOfLastTodo - perPage;
-    const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
 
     const toggleWidth = (width) => {
         setWidth(width)
     }
 
-    const renderTodos = currentTodos.map((todo, index) => {
-        return <Item key={index}
-            toggleWidth={toggleWidth} />
-    });
-
-
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(todos.length / perPage); i++) {
-        pageNumbers.push(i);
-    }
-
     const handleClick = event => {
         setIsActive('isActive')
-        setCurrentPage(Number(event.target.id))
     }
-
-    const renderPageNumbers = pageNumbers.map(number => {
-        return (
-            <li
-                key={number}
-                id={number}
-                onClick={handleClick}
-                className={number == currentPage && isActive}
-            >
-                {number}
-            </li>
-        );
-    });
 
     const options = [
         { value: 4, label: 'Show 4  entries' },
@@ -60,7 +28,6 @@ const Radio = (props) => {
     ];
 
     const handleChange = selectedOption => {
-        setPerPage(selectedOption.value)
         setSelect(selectedOption)
     }
 
@@ -68,8 +35,8 @@ const Radio = (props) => {
         <div className="Radio">
             <div className="Radio-Select">
                 <div className="Radio-Select-1">
-                    {!props.isRadio ? <img src={Tvv} alt="" />: <img src={microphone} alt="" />}
-                    <h1>{props.isRadio ? "Radio" : "Tv"}</h1>
+                    {!props.item.type == 'RADIO_TYPE' ? <img src={Tvv} alt="" /> : <img src={microphone} alt="" />}
+                    <h1>{props.item.type == 'RADIO_TYPE' ? "Radio" : "Tv"}</h1>
                 </div>
                 <div className="Radio-Select-2">
                     <Select
@@ -99,9 +66,11 @@ const Radio = (props) => {
                     </div>
                 </div>
             </div>
-            {renderTodos}
+            {props.item.data.data.map(item => <Item
+                key={item.id}
+                item={item}
+                toggleWidth={toggleWidth} />)}
             <div className="Radio-Pagination">
-                {renderPageNumbers}
             </div>
         </div>
     )

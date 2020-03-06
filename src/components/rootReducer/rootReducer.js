@@ -2,11 +2,13 @@ import { combineReducers } from 'redux'
 import { modalReducer } from './modalReducer'
 import { loginReducer } from './loginReducer'
 import { logOutReducer } from './logOutReducer'
+import { channelReducer } from './channelReducer'
 
 const appReducer = combineReducers({
     modalReducer,
     loginReducer,
-    logOutReducer
+    logOutReducer,
+    channelReducer
 })
 
 const rootReducer = (state, action) => {
