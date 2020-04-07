@@ -1,11 +1,17 @@
 export const modalReducer = (state = {}, action) => {
 
     switch (action.type) {
-        case 'MODAL_OPEN':
+        case 'MODAL_OPEN_NEW_LINE':
             return {
                 ...state,
-                isModal: action.isModal
+                isModalNewLine: action.isModalNewLine
             }
+        case 'MODAL_OPEN_MAG': {
+            return {
+                ...state,
+                isModalMag: action.isModalMag
+            }
+        }
         case 'MODAL_OPEN_DROPDOWN':
             return {
                 ...state,

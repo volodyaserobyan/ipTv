@@ -18,12 +18,23 @@ import {
     isModalActiveDropDownLink,
     isModalActiveDropDownEpg
 } from '../Action'
+import { Link } from 'react-router-dom'
 
 const ActionDropDown = props => {
 
     return (
         <section className="ActionDropDown">
-            <div onClick={() => props.isModalOpenDownload(true)}><img src={DownloadIcon} alt='' /> <p>Download</p></div>
+            {props.isMag &&
+                <Link to={{
+                    pathname: `${process.env.PUBLIC_URL}/dashboard/clients/mag/order`
+                }}>
+                    <div>
+                        <p>BQT ORDER</p>
+                    </div>
+                </Link>}
+            <div onClick={() => props.isModalOpenDownload(true)}>
+                <img src={DownloadIcon} alt='' /> <p>Download</p>
+            </div>
             <div><img src={DisableIcon} alt='' /> <p>Disable</p></div>
             <div onClick={() => props.isModalOpenEdit(true)}><img src={EditIcon} alt='' /> <p>Edit</p></div>
             <div><img src={changePassword} alt='' /> <p>Change Password</p></div>

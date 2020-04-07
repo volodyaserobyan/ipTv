@@ -7,6 +7,7 @@ import { isAuth } from './helpers/Utilities'
 import PrivateRoute from './helpers/PrivateRoute'
 import {
   NewLineModal,
+  MagModal,
   DownloadModal,
   EditModal,
   ExtendModal,
@@ -27,7 +28,8 @@ const App = props => {
 
   return (
     <div className="App">
-      {props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isModal && <NewLineModal />}
+      {props.isOpenModalNewLine && <NewLineModal />}
+      {props.isOpenModalMag && <MagModal />}
       {props.isOpenModal.isModalDropDown != undefined && props.isOpenModal.isModalDropDown && <DownloadModal />}
       {props.isOpenModal.isModalDropDownEdit != undefined && props.isOpenModal.isModalDropDownEdit && <EditModal />}
       {props.isOpenModal.isModalDropDownExtend != undefined && props.isOpenModal.isModalDropDownExtend && <ExtendModal />}
@@ -53,6 +55,8 @@ const App = props => {
 
 const mapStateToProps = state => {
   return {
+    isOpenModalNewLine: state.modalReducer.isModalNewLine,
+    isOpenModalMag: state.modalReducer.isModalMag,
     isOpenModal: state.modalReducer,
     logOutReducer: state.logOutReducer.logOut
   }

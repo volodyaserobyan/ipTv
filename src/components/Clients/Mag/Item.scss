@@ -1,0 +1,38 @@
+.Mag-Table-Item {
+    width: 100%;
+    margin-top: 13px;
+    padding: 18px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #31304f;
+    border-radius: 5px;
+  
+    &-Logo {
+      flex: 0 0 40px !important;
+      max-height: 40px;
+    }
+  
+    // > * {
+    //   flex: 1 1;
+    //   margin: 0;
+    // }
+  
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      flex: 1;
+      color: #c4c2e4;
+    }
+  
+    >div {
+      background: linear-gradient(113.21deg, #5d277f 0%, #af3f65 52.5%, #ff7173 124.44%);
+      padding: 10px 0px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      flex: 1;
+      color: #ffffff;
+      position: relative;
+    }
+  }
