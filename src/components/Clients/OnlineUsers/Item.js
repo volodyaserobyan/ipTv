@@ -1,17 +1,12 @@
 import React, { useState } from 'react'
+import ActionDropDwon from '../../DropDowns/ActionDropwDown'
+import arrowDawn from '../../../assets/arrowDown.png'
+import topArrow from '../../../assets/TopArrow.png'
 import './Item.scss'
 
 const Item = props => {
     const [onlineRadio, setOnlineRadio] = useState(false)
-
-    const handleRadioBtn = () => {
-        if(onlineRadio) {
-            setOnlineRadio(false)
-        }
-        else {
-            setOnlineRadio(true)
-        }
-    }
+    const [isDropDown, setIsDropDown] = useState(false)
 
     return (
         <div className="Item">
@@ -21,18 +16,24 @@ const Item = props => {
             <p className="Item_status">Movies</p>
             <div>
                 <label className="radioLabel">
-                    <input type='radio' name={`online ${props.identifyerRadio}`} checked={onlineRadio == true} onChange={handleRadioBtn} />
+                    <input type='radio' name={`online ${props.identifyerRadio}`}
+                        checked={onlineRadio == true}
+                        onChange={() => setOnlineRadio(!onlineRadio)} />
                     <div className="check"></div>
                 </label>
             </div>
             <div>
                 <label className="radioLabel">
-                    <input type='radio' name={`online ${props.identifyerRadio}`} checked={onlineRadio == false} onChange={handleRadioBtn} />
+                    <input type='radio' name={`online ${props.identifyerRadio}`}
+                     checked={onlineRadio == false} onChange={() => setOnlineRadio(!onlineRadio)} />
                     <div className="check"></div>
-                    </label>
+                </label>
             </div>
             <p>2019/01/08</p>
-            <p>Actions</p>
+            <div className='Action' onClick={() => setIsDropDown(!isDropDown)}>
+                Actions {isDropDown ? <img src={arrowDawn} alt='' /> : <img src={topArrow} alt='' />}
+                {isDropDown && <ActionDropDwon />}
+            </div>
         </div>
     )
 }

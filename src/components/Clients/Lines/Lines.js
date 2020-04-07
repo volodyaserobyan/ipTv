@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { options } from '../../Const/Const'
-import Select from 'react-select'
 import Item from './Item'
 import DashboardTitle from '../../DashboardTitle'
 import { connect } from 'react-redux'
+import arrowDawn from '../../../assets/arrowDown.png'
+import topArrow from '../../../assets/TopArrow.png'
 import './Lines.scss'
 import { isModalActive } from '../../Action'
 
@@ -52,19 +52,6 @@ const Lines = props => {
         );
     });
 
-    const sendObj = {
-        isModal: false,
-        isMag: props.isMag
-    }
-    const addNewLine = () => {
-        if (props.isOpenModal.isModal != undefined && props.isOpenModal.isModal.isModal) {
-            props.isModalOpen(sendObj)
-        } else {
-            sendObj.isModal = true
-            props.isModalOpen(sendObj)
-        }
-    }
-
     return (
         <section className="Lines">
             <div className="Lines-Table">
@@ -72,18 +59,10 @@ const Lines = props => {
                     setTodos={setTodos}
                     select={select}
                     handleChange={handleChange}
-                    isMag={props.isMag}
-                    isLines={props.isLines} />
+                    isLines={true} />
                 <div className="Lines-Table-Add">
-                    <p onClick={addNewLine}>+New Line</p>
-                    <Select
-                        value={select}
-                        className="SelectNpm"
-                        classNamePrefix="SelectNpm-Inner"
-                        onChange={handleChange}
-                        options={options}
-                        placeholder="Show 6 entries"
-                    />
+                    <p onClick={() => props.isModalOpen(true)}>+New Line</p>
+                    <p>Mass Action <img src={arrowDawn} alt='' /></p>
                 </div>
                 <div className="Lines-Table-Title">
                     <p className="Lines-Table-Title_id">ID</p>
@@ -108,16 +87,10 @@ const Lines = props => {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        isOpenModal: state.modalReducer
-    }
-}
-
 const mapDispatchToProps = dispatch => {
     return {
         isModalOpen: obj => dispatch(isModalActive(obj))
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Lines)
+export default connect(null, mapDispatchToProps)(Lines)
