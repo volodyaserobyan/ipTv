@@ -3,12 +3,14 @@ import { modalReducer } from './modalReducer'
 import { loginReducer } from './loginReducer'
 import { logOutReducer } from './logOutReducer'
 import { channelReducer } from './channelReducer'
+import { settingsReducer } from './settingsReducer'
 
 const appReducer = combineReducers({
     modalReducer,
     loginReducer,
     logOutReducer,
-    channelReducer
+    channelReducer,
+    settingsReducer
 })
 
 const rootReducer = (state, action) => {

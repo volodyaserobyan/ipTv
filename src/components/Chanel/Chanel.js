@@ -21,7 +21,7 @@ const Chanel = props => {
 
     return (
         <section className="Chanel">
-            <div className="Chanel-Cont">
+            <div className="Chanel-Cont"> 
                 {props.channelReducer.channels.map(item => <Radio item={item} />)}
                 {/* <Radio />
                 <Radio isRadio={true} /> */}

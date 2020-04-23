@@ -27,6 +27,7 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 22px;
+        cursor: pointer;
         color: #ffffff;
       }
     }
@@ -55,7 +56,9 @@
           border-radius: 15px;
           font-size: 18px;
           line-height: 27px;
-          color: rgba(172, 172, 172, 0.24);
+          &::placeholder {
+            color: rgba(172, 172, 172, 0.24);
+          }
         }
       }
 
@@ -71,14 +74,14 @@
           font-weight: 500;
           font-size: 24px;
           line-height: 30px;
-          color: #C4C2E4;
+          color: #c4c2e4;
         }
 
         p {
           font-weight: 500;
           font-size: 16px;
           line-height: 30px;
-          color: #C4C2E4;
+          color: #c4c2e4;
         }
       }
     }

@@ -73,7 +73,6 @@ export const isAuthLogin = (url, infoObj) => {
 }
 
 export const channelList = url => {
-
     return (dispatch) => {
         fetch(url, {
             method: 'GET',
@@ -86,6 +85,55 @@ export const channelList = url => {
                 dispatch({
                     type: "GET_CHANNELS",
                     channel: channel
+                })
+            }
+            ).catch(error => {
+                dispatch({
+                    type: 'ERROR',
+                    info: error
+                })
+            })
+    }
+}
+
+export const getSettings = url => {
+    return dispatch => {
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem('token')}`
+            }
+        }).then(response => response.json())
+            .then(getSetting => {
+                dispatch({
+                    type: "GET_SETTINGS",
+                    getSetting: getSetting
+                })
+            }
+            ).catch(error => {
+                dispatch({
+                    type: 'ERROR',
+                    info: error
+                })
+            })
+    }
+}
+
+export const postSettings = (url, body, put) => {
+    return dispatch => {
+        fetch(url, {
+            method: put ? 'PUT' : 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify(body)
+        }).then(response => response.json())
+            .then(postSetting => {
+                dispatch({
+                    type: "POST_SETTINGS",
+                    postSetting: postSetting
                 })
             }
             ).catch(error => {
