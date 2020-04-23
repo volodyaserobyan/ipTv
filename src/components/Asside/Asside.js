@@ -84,14 +84,9 @@ const Asside = props => {
                         <NavLink to={{
                             pathname: `${process.env.PUBLIC_URL}/dashboard/clients/mag`
                         }}
-                            activeClassName='isActiveList'>
+                            activeClassName='isActiveList'
+                            className={window.location.href.includes('/dashboard/clients/mag') ? 'isActive' : ''}>
                             Manage MAG
-                        </NavLink>
-                        <NavLink to={{
-                            pathname: `${process.env.PUBLIC_URL}/dashboard/clients/preactive`
-                        }}
-                            activeClassName='isActiveList'>
-                            Preactive codes
                         </NavLink>
                     </div>}
                     <NavLink to={{

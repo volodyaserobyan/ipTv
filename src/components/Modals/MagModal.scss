@@ -1,0 +1,143 @@
+.MagModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* background: rgb(red, green, blue); */
+    background: linear-gradient(
+        127.43deg,
+        rgba(76, 64, 76, 0.85) 0%,
+        rgba(155, 114, 120, 0.85) 25.93%,
+        rgba(248, 156, 125, 0.85) 46.38%,
+        rgba(178, 124, 124, 0.85) 92.55%
+    );
+
+    &-Cont {
+        width: -webkit-calc(100% - 32px);
+        width: -moz-calc(100% - 32px);
+        width: calc(100% - 32px);
+        max-width: 1089px;
+        box-sizing: border-box;
+        margin: 48px auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        min-height: calc(100% - (96px));
+        background: #222133;
+        box-shadow: 0px 4px 20px #0d0c34;
+        border-radius: 15px;
+
+        &-Title {
+            width: 100%;
+            padding: 24px;
+            background: #1b1a2a;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+
+            h1 {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+                color: #31304f;
+            }
+        }
+        &-Context {
+            display: flex;
+            flex-direction: column;
+            padding: 45px 160px;
+
+            &_elm {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 48px;
+
+                > div {
+                    display: flex;
+                    align-items: center;
+                    p {
+                        font-weight: 500;
+                        font-size: 22px;
+                        line-height: 26px;
+                        color: #999999;
+                        margin-left: 10px;
+                    }
+
+                    img {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            &-1 {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                > input {
+                    width: 100%;
+                    background: #1b1a2a;
+                    border-radius: 15px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: rgba(172, 172, 172, 0.24);
+                    padding: 15px 28px;
+                    margin-top: 14px;
+                }
+                > p {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 22px;
+                    text-align: left;
+                    color: #999999;
+                    margin-top: 14px;
+                }
+            }
+
+            &-2 {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                > input,
+                textarea {
+                    width: 100%;
+                    background: #1b1a2a;
+                    border-radius: 15px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: rgba(172, 172, 172, 0.24);
+                    padding: 15px 28px;
+                    margin-top: 14px;
+                }
+
+                > p {
+                    font-size: 22px;
+                    line-height: 27px;
+                    text-align: left;
+                    margin-top: 14px;
+                    color: #c4c2e4;
+                }
+            }
+            &-Submit {
+                background: linear-gradient(90deg, #5433d7 50%, #bc3cc7 129.26%) !important;
+                border-radius: 42px;
+                padding: 18px 0px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 27px;
+                text-transform: capitalize;
+                color: #ffffff;
+                border: none;
+                margin-top: 20px;
+            }
+        }
+    }
+}

@@ -29,4 +29,17 @@
     line-height: 22px;
     color: #c4c2e4;
   }
+  .Action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(113.21deg, #5d277f 0%, #af3f65 52.5%, #ff7173 124.44%);
+    padding: 10px 0px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    flex: 1;
+    color: #ffffff;
+    position: relative;
+  }
 }

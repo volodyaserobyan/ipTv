@@ -1,7 +1,14 @@
 export const isModalActive = obj => {
     return {
-        type: 'MODAL_OPEN',
-        isModal: obj
+        type: 'MODAL_OPEN_NEW_LINE',
+        isModalNewLine: obj
+    }
+}
+
+export const isModalActiveMag = obj => {
+    return {
+        type: 'MODAL_OPEN_MAG',
+        isModalMag: obj
     }
 }
 
