@@ -133,7 +133,8 @@ export const postSettings = (url, body, put) => {
             method: put ? 'PUT' : 'POST',
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${localStorage.getItem('token')}`
+                "Authorization": `Bearer ${localStorage.getItem('token')}`,
+                // "Content-Type": put ? "x-www-form-urlencoded" : "multipart/form-data"
             },
             body: JSON.stringify(body)
         }).then(response => response.json())

@@ -74,6 +74,10 @@ const Settings = props => {
     if (_.isEmpty(props.settingsGET) || option.length == 0) {
         return (<div>Loading...</div>)
     }
+
+    const handleTimezone = e => {
+        setTimezone(e.target.value)
+    }
     return (
         <section className="Settings">
             <div className="Settings-Cont">
@@ -92,7 +96,7 @@ const Settings = props => {
                             <input
                                 placeholder="Timezone"
                                 value={timezone}
-                                onChange={e => setTimezone(e.target.vaue)} />
+                                onChange={handleTimezone} />
                         </div>
                     </div>
                     <div className="Settings-Cont-Context-Date item">

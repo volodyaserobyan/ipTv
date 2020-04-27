@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d21a5af02c67ee7075ea177417a042bf",
+    "revision": "bf49a3103e25b279507259ce3d4c5cb0",
     "url": "/react/iptv/build/index.html"
   },
   {
-    "revision": "5925dca3e26b62fb6e27",
+    "revision": "149af4caf55efb5677b8",
     "url": "/react/iptv/build/static/css/main.ba2d3377.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react/iptv/build/static/js/2.e10459c1.chunk.js.LICENSE"
   },
   {
-    "revision": "5925dca3e26b62fb6e27",
-    "url": "/react/iptv/build/static/js/main.0649e3dd.chunk.js"
+    "revision": "149af4caf55efb5677b8",
+    "url": "/react/iptv/build/static/js/main.78bc92fd.chunk.js"
   },
   {
     "revision": "ceef90afee6e730b3b4b",
