@@ -11,6 +11,7 @@ import Message from '../Message/Message'
 import Notification from '../Notification/Notification'
 import { withRouter } from "react-router";
 import { Route } from 'react-router-dom';
+import SubTub from './SubTub'
 import Logs from './Logs'
 import './DashBoard.scss'
 
@@ -53,7 +54,8 @@ const DashBoard = (props) => {
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/main`} component={Main} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/clients`} component={Clients} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/chanel`} component={Chanel} />
-                <Route path={`${process.env.PUBLIC_URL}/dashboard/subsellers`} component={SubSellers} />
+                <Route path={`${process.env.PUBLIC_URL}/dashboard/subsellers`} component={SubTub} />
+                {/* <Route path={`${process.env.PUBLIC_URL}/dashboard/sub/details`} component={SubSellers} /> */}
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/creditslogs`} component={CreditLogs} />
                 <Route path={`${process.env.PUBLIC_URL}/dashboard/settings`} component={Settings} />
                 {isOpenLogs && <Logs handleClickLogs={handleClickLogs} />}

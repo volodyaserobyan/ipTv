@@ -90,10 +90,10 @@ const Asside = props => {
                         </NavLink>
                     </div>}
                     <NavLink to={{
-                        pathname: `${process.env.PUBLIC_URL}/dashboard/subsellers/details`
+                        pathname: `${process.env.PUBLIC_URL}/dashboard/subsellers`
                     }}
                         activeClassName="isActive"
-                        className={window.location.href.includes('/dashboard/subsellers/') ? 'isActive' : ''}>
+                        className={window.location.href.includes('/dashboard/sub/') ? 'isActive' : ''}>
                         <li>
                             <img src={addUserIcon} alt="" /> {props.isOpenAsside && <p>Subsellers</p>}
                         </li>

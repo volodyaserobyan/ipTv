@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Purchase = () => {
-
+console.log('sadasdas')
     return (
         <div className='SubSellers-Cont-Purchase'>
             <div className='SubSellers-Cont-Purchase-Title'>

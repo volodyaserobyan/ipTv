@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bf49a3103e25b279507259ce3d4c5cb0",
+    "revision": "69a1f8cbdd127d9e3e91419f32f19762",
     "url": "/react/iptv/build/index.html"
   },
   {
-    "revision": "149af4caf55efb5677b8",
-    "url": "/react/iptv/build/static/css/main.ba2d3377.chunk.css"
+    "revision": "04e391bbd2db66b63652",
+    "url": "/react/iptv/build/static/css/main.4ea35701.chunk.css"
   },
   {
-    "revision": "bb703d5f4f1809f6cf77",
-    "url": "/react/iptv/build/static/js/2.e10459c1.chunk.js"
+    "revision": "cfe024683ef99b31106d",
+    "url": "/react/iptv/build/static/js/2.f4e87a2e.chunk.js"
   },
   {
     "revision": "c19564e1c5bd279625fb1936cbc62667",
-    "url": "/react/iptv/build/static/js/2.e10459c1.chunk.js.LICENSE"
+    "url": "/react/iptv/build/static/js/2.f4e87a2e.chunk.js.LICENSE"
   },
   {
-    "revision": "149af4caf55efb5677b8",
-    "url": "/react/iptv/build/static/js/main.78bc92fd.chunk.js"
+    "revision": "04e391bbd2db66b63652",
+    "url": "/react/iptv/build/static/js/main.e1644ab3.chunk.js"
   },
   {
     "revision": "ceef90afee6e730b3b4b",
